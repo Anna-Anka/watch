@@ -1,0 +1,93 @@
+body {
+	color: $grey-500;
+	font-weight: $fw-400;
+	font-size: 14px;
+	font-family: $poppins, Arial, sans-serif;
+	line-height: 2;
+	background-color: $white;
+}
+
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 22px 44px;
+	color: $white;
+	line-height: 1;
+	background-color: $violet-400;
+	border-radius: 5px;
+
+	&--dark {
+		background-color: $black;
+	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: 1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
+
+.disable-scroll {
+	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.logo {
+	display: inline-block;
+	width: 100%;
+	@include adaptiv-value('max-width', 270, 160, 1);
+	@include adaptiv-value('height', 33, 20, 1);
+
+	&--large {
+		@include adaptiv-value('max-width', 384, 286, 1);
+		@include adaptiv-value('height', 48, 35, 1);
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.title {
+	@include adaptiv-value('font-size', 42, 28, 1);
+	@include adaptiv-value('margin-bottom', 40, 30, 1);
+	color: $black;
+	line-height: 1;
+}
