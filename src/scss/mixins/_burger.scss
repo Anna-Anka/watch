@@ -1,14 +1,14 @@
 /* stylelint-disable */
 
 @mixin burger {
-	$burger-width: 30px;
-	$burger-height: 30px;
-	$burger-line-height: 2px;
+	$burger-width: 28px;
+	$burger-height: 24px;
+	$burger-line-height: 4px;
 
 	position: relative;
 	width: $burger-width;
 	height: $burger-height;
-	color: $black;
+	color: $violet-400;
 
 	&::before,
 	&::after {

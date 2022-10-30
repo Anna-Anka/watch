@@ -41,6 +41,15 @@
 	justify-content: space-between;
 }
 
+@mixin psevde {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+    }
+}
+
 @mixin image-set($pathToImage) {
   background-image: url("#{$pathToImage}.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
