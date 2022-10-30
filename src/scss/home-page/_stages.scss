@@ -1,0 +1,128 @@
+.stages {
+	position: relative;
+	padding: 90px 0;
+	color: $white;
+	text-align: center;
+	background-color: $violet-400;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+	}
+
+	&::before {
+		top: 0;
+		left: 50%;
+		width: 60px;
+		height: 55px;
+		border-top: 60px solid $white;
+		border-right: 55px solid transparent;
+		border-left: 55px solid transparent;
+		transform: translateX(-50%);
+	}
+
+	&__container {
+		@include flex-v-center;
+	}
+
+	&__title {
+		color: $white;
+		@include adaptiv-value('margin-bottom', 74, 30, 1);
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		@include adaptiv-value('margin-bottom', 56, 42, 1);
+
+		@include mq(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		@include flex-v-center;
+		position: relative;
+		width: 100%;
+		max-width: 227px;
+		padding: 0 10px;
+
+		@include mq(md) {
+			flex-direction: column-reverse;
+			max-width: 100%;
+			padding: 0;
+		}
+
+		&:not(:last-child) {
+			@include mq(md) {
+				margin-bottom: 60px;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			top: 30px;
+			left: 100px;
+			width: 98%;
+			height: 1px;
+			background-color: $white;
+			content: '';
+
+			@include mq(md) {
+				top: unset;
+				bottom: -58px;
+				left: 50%;
+				width: 1px;
+				height: 100%;
+				transform: translate(-50%);
+			}
+		}
+
+		&:last-child {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&__number {
+		position: relative;
+		width: 60px;
+		height: 60px;
+		margin-bottom: 30px;
+		padding: 5px;
+		font-size: 32px;
+		font-family: $space;
+		line-height: 1.2;
+		text-align: center;
+		vertical-align: middle;
+		background-color: $violet-400;
+		border: 1px solid $white;
+		border-radius: 50%;
+
+		@include mq(md) {
+			margin-bottom: 0;
+		}
+
+		&::before {
+			position: absolute;
+			top: -13px;
+			left: -13px;
+			width: 86px;
+			height: 86px;
+			border: 1px solid rgba($white, 0.2);
+			border-radius: inherit;
+			content: '';
+		}
+	}
+
+	&__subtitle {
+		font-size: 12px;
+
+		@include mq(md) {
+			margin-bottom: 22px;
+		}
+	}
+}

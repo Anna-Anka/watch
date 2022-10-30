@@ -89,7 +89,7 @@ body {
 	@include adaptiv-value('font-size', 42, 28, 1);
 	@include adaptiv-value('margin-bottom', 40, 30, 1);
 	color: $black;
-	font-family: 'space-age-pro';
+	font-family: $space;
 	line-height: 1;
 	text-transform: uppercase;
 }
