@@ -1,0 +1,254 @@
+.features {
+	@include adaptiv-value('padding-top', 75, 50, 1);
+	@include adaptiv-value('padding-bottom', 150, 70, 1);
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 120, 110, 1);
+		text-align: center;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+
+		@include mq(lg) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@include mq(lg) {
+			margin-bottom: 50px;
+		}
+
+		.features__info {
+			text-align: right;
+
+			@include mq(lg) {
+				text-align: center;
+			}
+
+			&:first-child {
+				transform: translateY(-40px);
+			}
+
+			&:last-child {
+				margin-top: auto;
+				transform: translateY(40px);
+			}
+
+			&:first-child,
+			&:last-child {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__watch {
+		position: relative;
+		width: 100%;
+		border: 1px solid rgba($black, 0.4);
+		border-radius: 50%;
+		@include adaptiv-value('max-width', 434, 250, 1);
+		@include adaptiv-value('height', 434, 250, 1);
+		@include flex-all-center;
+
+		@include mq(lg) {
+			order: -1;
+			margin-bottom: 96px;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			border-radius: inherit;
+			content: '';
+		}
+
+		&::before {
+			position: absolute;
+			@include adaptiv-value('top', -44, -24, 1);
+			@include adaptiv-value('left', -44, -24, 1);
+			border: 1px solid rgba($black, 0.1);
+			@include adaptiv-value('width', 520, 300, 1);
+			@include adaptiv-value('height', 520, 300, 1);
+		}
+
+		&::after {
+			position: absolute;
+			@include adaptiv-value('top', -98, -56, 1);
+			@include adaptiv-value('left', -98, -56, 1);
+			border: 1px solid rgba($black, 0.05);
+			@include adaptiv-value('width', 630, 365, 1);
+			@include adaptiv-value('height', 630, 365, 1);
+		}
+	}
+
+	&__picture {
+		position: relative;
+		display: block;
+		@include adaptiv-value('max-width', 300, 175, 1);
+		@include adaptiv-value('height', 370, 215, 1);
+
+		&::before {
+			position: absolute;
+			top: 12px;
+			left: -21px;
+			border: 1px solid rgba($black, 0.9);
+			border-radius: 50%;
+			content: '';
+			@include adaptiv-value('width', 342, 200, 1);
+			@include adaptiv-value('height', 342, 200, 1);
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	&__info {
+		position: relative;
+		width: 100%;
+		max-width: 240px;
+		font-size: 10px;
+
+		@include mq(lg) {
+			@include flex-v-center;
+			text-align: center;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+
+			@include mq(lg) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&--style,
+		&--features {
+			.features__decor {
+				top: 3px;
+
+				@include mq(lg) {
+					top: unset;
+				}
+			}
+		}
+
+		&--style,
+		&--components {
+			.features__decor {
+				right: -40px;
+
+				@include mq(lg) {
+					right: unset;
+				}
+			}
+		}
+
+		&--style {
+			.features__decor {
+				&::after {
+					top: 53px;
+					width: 173px;
+					height: 95px;
+					background-image: url('../img/features/style.svg');
+				}
+			}
+		}
+
+		&--components {
+			.features__decor {
+				top: 50%;
+				transform: translateY(-50%);
+
+				@include mq(lg) {
+					top: unset;
+				}
+
+				&::after {
+					top: -19px;
+					width: 104px;
+					height: 54px;
+					background-image: url('../img/features/components.svg');
+				}
+			}
+		}
+
+		&--features {
+			.features__decor {
+				left: -40px;
+
+				@include mq(lg) {
+					left: unset;
+				}
+
+				&::after {
+					top: 37px;
+					left: -113px;
+					width: 117px;
+					height: 64px;
+					background-image: url('../img/features/features.svg');
+				}
+			}
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 18px;
+		color: $black;
+		font-weight: $fw-500;
+		font-size: 18px;
+		line-height: 0.9;
+	}
+
+	&__decor {
+		position: absolute;
+		z-index: 1;
+		display: block;
+		width: 14px;
+		height: 14px;
+		background-color: $violet-400;
+		border-radius: 50%;
+		box-shadow: 0 0 0 4px rgba($violet-400, 0.2);
+
+		@include mq(lg) {
+			position: relative;
+			margin-bottom: 20px;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+		}
+
+		&::before {
+			top: -10px;
+			left: -10px;
+			z-index: -1;
+			width: 35px;
+			height: 35px;
+			background-color: rgba($violet-400, 0.1);
+			border-radius: inherit;
+		}
+
+		&::after {
+			top: 50%;
+			transform: translateY(-50%);
+			@include bg-conatin;
+
+			@include mq(lg) {
+				display: none;
+			}
+		}
+	}
+}
