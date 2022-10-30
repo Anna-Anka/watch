@@ -89,28 +89,30 @@ body {
 	@include adaptiv-value('font-size', 42, 28, 1);
 	@include adaptiv-value('margin-bottom', 40, 30, 1);
 	color: $black;
+	font-family: 'space-age-pro';
 	line-height: 1;
+	text-transform: uppercase;
 }
 
 .form {
-    &__field {
-        width: 100%;
-        padding: 17px 30px;
-        line-height: 1;
-        background-color: $white;
-        border-radius: 5px;
+	&__field {
+		width: 100%;
+		padding: 17px 30px;
+		line-height: 1;
+		background-color: $white;
+		border-radius: 5px;
 
-        &::placeholder {
-            color: $grey-500;
-            line-height: 1;
-        }
-    }
+		&::placeholder {
+			color: $grey-500;
+			line-height: 1;
+		}
+	}
 
-    &__text {
-        @include adaptiv-value("font-size", 14, 10, 1);
-    }
+	&__text {
+		@include adaptiv-value('font-size', 14, 10, 1);
+	}
 
-    &__link {
-        font-weight: $fw-500;
-    }
+	&__link {
+		font-weight: $fw-500;
+	}
 }

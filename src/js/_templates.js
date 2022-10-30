@@ -78,7 +78,7 @@ burger()
 // const scroll = new SmoothScroll('a[href*="#"]');
 
 // * Подключение галереи (Fullscreen Lightbox)
-//import 'fslightbox'
+import 'fslightbox'
 
 // * Подключение mixit up
 //import mixitup from 'mixitup';

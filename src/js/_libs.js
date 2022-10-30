@@ -7,9 +7,6 @@
 // * inputmask
 //import '../../node_modules/maskedinput/dist/min/jquery.inputmask.bundle.min.js'
 
-// * fancybox
-//import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
-
 // * rateyo
 //import '../../node_modules/rateyo/src/jquery.rateyo.js'
 
