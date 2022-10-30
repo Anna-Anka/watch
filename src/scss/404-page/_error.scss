@@ -1,0 +1,56 @@
+.error {
+	min-height: 100vh;
+	text-align: center;
+	background-color: $grey-100;
+
+	&__container {
+		@include flex-all-center-v;
+		min-height: inherit;
+	}
+
+	&__title {
+		width: 100%;
+		max-width: 510px;
+		margin-bottom: 30px;
+	}
+
+	&__img {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		@include adaptiv-value('height', 355, 245, 1);
+		@include adaptiv-value('max-width', 440, 235, 1);
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			color: $black;
+			font-weight: $fw-800;
+			transform: translateY(-50%);
+			content: '4';
+
+			@include adaptiv-value('font-size', 273, 185, 1);
+		}
+
+		&::before {
+			left: -60px;
+			z-index: -1;
+		}
+
+		&::after {
+			right: -60px;
+		}
+	}
+
+	&__bg {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 50px;
+		@include bg-conatin;
+	}
+
+	&__link {
+		max-width: fit-content;
+	}
+}
