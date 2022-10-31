@@ -2,9 +2,13 @@
 { 'title' : 'VOLUMENZEIT — DREAM WATCH | Home page' }
 )
 
-@include('./components/_header.html')
+@include('./components/_header.html', {
+    'class' : 'header--background'
+})
 
 <main class="main">
+
+    @include('./home-page/_hero.html')
 
     @include('./home-page/_features.html')
 

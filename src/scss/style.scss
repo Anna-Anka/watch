@@ -10,6 +10,7 @@
 
 // * components
 @import './components/header';
+@import './components/follow';
 @import './components/footer';
 
 // * templates
@@ -19,6 +20,7 @@
 //@import './templates/marquee';
 
 // * home-page
+@import './home-page/hero';
 @import './home-page/features';
 @import './home-page/stages';
 @import './home-page/mission';

@@ -2,6 +2,10 @@
 	@include adaptiv-value('padding-top', 24, 15, 1);
 	@include adaptiv-value('padding-bottom', 24, 15, 1);
 
+    &--background {
+        background-color: $grey-100;
+    }
+
 	&__nav {
 		@include flex-center-sb;
 	}
@@ -9,6 +13,7 @@
 	&__logo {
 		z-index: 10;
 		margin-right: 12px;
+        transform: translateY(5px);
 	}
 }
 
@@ -18,7 +23,6 @@
 	margin-right: 12px;
 
 	@include mq(lg) {
-        padding: 94px 20px 30px;
 		position: absolute;
 		top: -100%;
 		right: 0;
@@ -28,6 +32,7 @@
 		flex-direction: column;
 		width: 100%;
 		height: 100vh;
+        padding: 94px 20px 30px;
 		overflow-y: auto;
 		background-color: $grey-100;
 		visibility: hidden;
@@ -51,6 +56,7 @@
 		@include mq(lg) {
 			flex-direction: column;
             margin-bottom: 50px;
+            margin-right: 0;
 		}
 	}
 

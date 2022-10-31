@@ -1,0 +1,95 @@
+.hero {
+	display: flex;
+	align-items: flex-end;
+	min-height: calc(100vh - 102px);
+	background-color: $grey-100;
+
+	@include mq(md) {
+		flex-direction: column;
+	}
+
+	&__content,
+	&__container {
+		min-height: inherit;
+	}
+
+	&__content {
+		flex: 0 0 100%;
+
+		@include mq(md) {
+			min-height: auto;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__container {
+		display: flex;
+	}
+
+	&__inner {
+		@include flex-v-sb;
+		width: 50%;
+		padding-bottom: 40px;
+
+		@include mq(md) {
+			justify-content: flex-start;
+			width: 100%;
+		}
+	}
+
+	&__box {
+		margin-top: auto;
+		margin-bottom: 30px;
+
+		@include mq(md) {
+			margin-top: 0;
+			padding-top: 40px;
+			text-align: center;
+		}
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		@include adaptiv-value('font-size', 60, 40, 1);
+
+		@include mq(sm) {
+			font-size: 36px;
+		}
+	}
+
+	&__text {
+		@include adaptiv-value('margin-bottom', 50, 40, 1);
+	}
+
+	&__link {
+		max-width: fit-content;
+
+		@include mq(md) {
+			margin: 0 auto;
+		}
+	}
+
+	&__bg {
+		position: relative;
+		flex: 0 0 50%;
+		padding-bottom: 28%;
+		transform: translateX(-100%);
+		@include bg-cover;
+
+		@include mq(md) {
+			flex-basis: 100%;
+			width: 100%;
+			padding-bottom: 63%;
+			transform: translateX(0);
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include bg-cover;
+	}
+}
