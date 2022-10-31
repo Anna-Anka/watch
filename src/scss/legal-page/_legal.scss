@@ -1,0 +1,33 @@
+.legal {
+	background-color: $grey-100;
+	@include adaptiv-value('padding-top', 100, 40, 1);
+
+	&__title {
+		text-align: center;
+		@include adaptiv-value('margin-bottom', 83, 30, 1);
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2;
+		background-color: $white;
+		@include adaptiv-value('padding-top', 90, 25, 1);
+		@include adaptiv-value('padding-bottom', 160, 30, 1);
+		@include adaptiv-value('padding-right', 160, 25, 1);
+		@include adaptiv-value('padding-left', 160, 25, 1);
+	}
+
+	&__content {
+		h3 {
+			margin-bottom: 20px;
+			color: $black;
+			font-weight: $fw-600;
+			font-size: 24px;
+			line-height: 1.2;
+		}
+
+		p {
+			margin-bottom: 35px;
+		}
+	}
+}
