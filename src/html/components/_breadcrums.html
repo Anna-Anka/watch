@@ -1,0 +1,30 @@
+<div class="breadcrums">
+    <div class="container">
+
+        @if(context.count === '2') {
+            <h1 class="breadcrums__title title">@title</h1>
+            <ul class="breadcrums__items">
+                <li class="breadcrums__item">
+                    <a class="breadcrums__link" href="#">@item-1</a>
+                </li>
+                <li class="breadcrums__item breadcrums__item--current">
+                    <a class="breadcrums__link">@item-current</a>
+                </li>
+            </ul>
+        }
+
+        @if(context.count === '1') {
+            <h1 class="breadcrums__title title">@title</h1>
+            <ul class="breadcrums__items">
+                <li class="breadcrums__item breadcrums__item--current">
+                    <a class="breadcrums__link">@item-current</a>
+                </li>
+            </ul>
+        }
+
+        @if(context.count === '1') {
+            <h1 class="breadcrums__title breadcrums__title--only title">@title</h1>
+        }
+
+    </div>
+</div>
