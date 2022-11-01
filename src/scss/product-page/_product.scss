@@ -1,0 +1,168 @@
+.product {
+	@include adaptiv-value('padding-top', 70, 25, 1);
+	@include adaptiv-value('padding-bottom', 115, 50, 1);
+
+	&__wrapper {
+		display: flex;
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
+	}
+
+	&__swiper {
+		width: 100%;
+		max-width: 730px;
+		margin-right: 20px;
+
+		@include mq(lg) {
+			flex-direction: column;
+			margin-right: 0;
+			margin-bottom: 56px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 350px;
+
+		@include mq(lg) {
+			max-width: 60%;
+			margin: 0 auto;
+		}
+
+		@include mq(md) {
+			max-width: 80%;
+		}
+
+		@include mq(sm) {
+			max-width: 100%;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 2fr 2fr;
+		gap: 28px;
+	}
+
+	&__item {
+		height: 367px;
+	}
+
+	&__img {
+		object-fit: cover;
+		border-radius: 6px;
+	}
+
+	&__title,
+	&__text {
+		margin-bottom: 20px;
+
+		@include mq(lg) {
+			text-align: center;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('font-size', 32, 28, 1);
+		color: $black;
+		line-height: 0.6;
+	}
+
+	&__text {
+		font-size: 12px;
+	}
+
+	&__list {
+		position: relative;
+		margin-bottom: 22px;
+		padding: 14px 0 28px;
+		font-size: 10px;
+		line-height: 2.1;
+
+		@include mq(lg) {
+			order: 1;
+			margin-bottom: 0;
+			padding: 0;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: $grey-400;
+			content: '';
+
+			@include mq(md) {
+				display: none;
+			}
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+	}
+
+	&__characteristic {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__name {
+		width: 30%;
+		margin-right: 8px;
+	}
+
+	&__meaning {
+		width: 68%;
+		text-align: right;
+	}
+
+	&__bottom {
+		@include mq(lg) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__order {
+		@include flex-center-sb;
+		margin-bottom: 22px;
+	}
+
+	&__price {
+		color: $black;
+		font-size: 20px;
+		line-height: 1;
+	}
+
+	&__custome {
+		max-width: 100%;
+	}
+
+	picture {
+		display: inline-block;
+	}
+}
+
+.custome {
+	padding: 12px 20px;
+	color: $black;
+	border: 1px solid $black;
+	border-radius: 5px;
+	@include flex-all-center;
+
+	&__icon {
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		border-radius: 5px;
+	}
+}

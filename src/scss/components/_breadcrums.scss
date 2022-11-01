@@ -3,6 +3,7 @@
 	background-color: $violet-400;
 	@include adaptiv-value('padding-top', 90, 25, 1);
 	@include adaptiv-value('padding-bottom', 50, 25, 1);
+	border-radius: 5px;
 
 	&__title {
 		color: $white;
@@ -17,21 +18,20 @@
 
 	&__item {
 		position: relative;
-        padding-right: 10px;
+		padding-right: 10px;
 
 		&::before {
 			position: absolute;
+			top: 0;
 			right: 2px;
 			font-size: inherit;
 			content: '/';
-            top: 0;
-
 		}
 
 		&:last-child {
-            &::before {
-                display: none;
-            }
-        }
- 	}
+			&::before {
+				display: none;
+			}
+		}
+	}
 }
