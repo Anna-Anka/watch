@@ -13,7 +13,14 @@
 })
 
 <main class="main">
-    @include('./catalog-page/_catalog.html')
+    <div class="catalog">
+        <div class="container">
+            <div class="catalog__wrapper">
+                @include('./catalog-page/_filters.html')
+                @include('./catalog-page/_products.html')
+            </div>
+        </div>
+    </div>
 </main>
 
 @include('./components/_footer.html')

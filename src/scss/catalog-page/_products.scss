@@ -1,0 +1,32 @@
+.products {
+	width: 100%;
+	max-width: 825px;
+	padding-top: 45px;
+
+	&__sort {
+		margin-bottom: 32px;
+		margin-left: auto;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px 25px;
+		@include adaptiv-value('margin-bottom', 70, 40, 1);
+
+		@include mq(lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mq(sm) {
+			grid-template-columns: 255px;
+			justify-content: center;
+		}
+	}
+
+	.product-card {
+		&__images {
+			height: 300px;
+		}
+	}
+}
