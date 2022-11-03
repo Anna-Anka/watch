@@ -52,6 +52,33 @@
 	}
 }
 
+@mixin slider-arrow {
+	position: relative;
+	width: 80px;
+	height: 40px;
+	margin-top: 0;
+
+	&:not(:last-child) {
+		@include adaptiv-value('margin-right', 137, 60, 1);
+	}
+
+	&::after {
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 22px;
+		font-size: 0;
+		background-image: url('../img/icons/arrow.svg');
+		@include bg-conatin;
+	}
+
+	&--next {
+		&::after {
+			transform: rotate(180deg);
+		}
+	}
+}
+
 @mixin image-set($pathToImage) {
 	background-image: url('#{$pathToImage}.jpg');
 	/* stylelint-disable-next-line declaration-block-no-duplicate-properties */

@@ -1,51 +1,57 @@
 <section class="product section">
     <div class="container">
         <div class="product__wrapper">
-            <div class="product__swiper swiper">
-              <ul class="product__items swiper-wrapper">
-                 <li class="product__item swiper-slide">
-                    <picture>
-                       <source srcset="img/product/1.avif" type="image/avif">
-                       <source srcset="img/product/1.webp" type="image/webp">
-                       <img class="product__img" src="img/product/1.jpg" alt="Molumenzeit photo 1" width="350" height="367" loading="lazy">
-                    </picture>
-                 </li>
-                <li class="product__item swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product__img" src="img/product/2.jpg" alt="Molumenzeit photo 2" width="350" height="367" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product__item swiper-slide">
-                    <picture>
-                        <source srcset="img/product/3.avif" type="image/avif">
-                        <source srcset="img/product/3.webp" type="image/webp">
-                        <img class="product__img" src="img/product/3.jpg" alt="Molumenzeit photo 3" width="350" height="367" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product__item swiper-slide">
-                    <picture>
-                        <source srcset="img/product/4.avif" type="image/avif">
-                        <source srcset="img/product/4.webp" type="image/webp">
-                        <img class="product__img" src="img/product/4.jpg" alt="Molumenzeit photo 4" width="350" height="367" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product__item swiper-slide">
-                    <picture>
-                        <source srcset="img/product/5.avif" type="image/avif">
-                        <source srcset="img/product/5.webp" type="image/webp">
-                        <img class="product__img" src="img/product/5.jpg" alt="Molumenzeit photo 5" width="350" height="367" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product__item swiper-slide">
-                    <picture>
-                        <source srcset="img/product/6.avif" type="image/avif">
-                        <source srcset="img/product/6.webp" type="image/webp">
-                        <img class="product__img" src="img/product/6.jpg" alt="Molumenzeit photo 6" width="350" height="367" loading="lazy">
-                    </picture>
-                </li>
-              </ul>
+            <div class="product__swiper swiper" data-mobile="false">
+                <ul class="product__items swiper-wrapper">
+                    <li class="product__item swiper-slide">
+                        <picture>
+                            <source srcset="img/product/1.avif" type="image/avif">
+                            <source srcset="img/product/1.webp" type="image/webp">
+                            <img class="product__img" src="img/product/1.jpg" alt="Molumenzeit photo 1" width="350" height="367" loading="lazy">
+                        </picture>
+                    </li>
+                    <li class="product__item swiper-slide">
+                        <picture>
+                            <source srcset="img/product/2.avif" type="image/avif">
+                            <source srcset="img/product/2.webp" type="image/webp">
+                            <img class="product__img" src="img/product/2.jpg" alt="Molumenzeit photo 2" width="350" height="367" loading="lazy">
+                        </picture>
+                    </li>
+                    <li class="product__item swiper-slide">
+                        <picture>
+                            <source srcset="img/product/3.avif" type="image/avif">
+                            <source srcset="img/product/3.webp" type="image/webp">
+                            <img class="product__img" src="img/product/3.jpg" alt="Molumenzeit photo 3" width="350" height="367" loading="lazy">
+                        </picture>
+                    </li>
+                    <li class="product__item swiper-slide">
+                        <picture>
+                            <source srcset="img/product/4.avif" type="image/avif">
+                            <source srcset="img/product/4.webp" type="image/webp">
+                            <img class="product__img" src="img/product/4.jpg" alt="Molumenzeit photo 4" width="350" height="367" loading="lazy">
+                        </picture>
+                    </li>
+                    <li class="product__item swiper-slide">
+                        <picture>
+                            <source srcset="img/product/5.avif" type="image/avif">
+                            <source srcset="img/product/5.webp" type="image/webp">
+                            <img class="product__img" src="img/product/5.jpg" alt="Molumenzeit photo 5" width="350" height="367" loading="lazy">
+                        </picture>
+                    </li>
+                    <li class="product__item swiper-slide">
+                        <picture>
+                            <source srcset="img/product/6.avif" type="image/avif">
+                            <source srcset="img/product/6.webp" type="image/webp">
+                            <img class="product__img" src="img/product/6.jpg" alt="Molumenzeit photo 6" width="350" height="367" loading="lazy">
+                        </picture>
+                    </li>
+                </ul>
+                <div class="product__arrows">
+                    <button class="product__arrow product__arrow--prev swiper-button-prev" type="button">
+                    </button>
+                    <button class="product__arrow product__arrow--next swiper-button-next" type="button">
+                    </button>
+                </div>
             </div>
             <div class="product__content">
                 <h2 class="product__title">
@@ -111,7 +117,7 @@
                     </div>
                     <a class="product__custome custome" href="#">
                         <svg class="custome__icon">
-                           <use xlink:href="img/sprite.svg#custome">
+                            <use xlink:href="img/sprite.svg#custome">
                         </svg>
                         Try on in AR Online
                     </a>
