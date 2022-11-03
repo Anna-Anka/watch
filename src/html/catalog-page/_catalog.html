@@ -1,0 +1,202 @@
+<div class="catalog">
+    <div class="container">
+        <div class="catalog__wrapper">
+            <section class="filters">
+                <h2 class="sr-only">Filters</h2>
+                <div class="filters__items">
+                    <div class="filters__item filters-search form">
+                        <span class="filters__subtitle">Search</span>
+                        <label class="sr-only" for="search">Search</label>
+                        <input class="form__field" name="search" type="search" placeholder="Type Here" id="search">
+                    </div>
+
+                    <div class="filters__item filters-category">
+                        <span class="filters__subtitle">Select Products</span>
+                        <!-- Если это ссылки -->
+                        <ul class="filters-category__items">
+                            <li class="filters-category__item">
+                                <a class="filters-category__link" href="#">Watches</a>
+                            </li>
+                            <li class="filters-category__item">
+                                <a class="filters-category__link" href="#">Straps</a>
+                            </li>
+                        </ul>
+
+                        <!-- Если это радиокнопки -->
+                        <!-- <ul class="filters-category__items">
+                            <li class="filters-category__item">
+                                <label class="filters-category__item">
+                                    Watches
+                                    <input class="filters-category__field" name="category" type="radio" value="Watches">
+                                </label>
+                            </li>
+                            <li class="filters-category__item">
+                                <label class="filters-category__item">
+                                    Straps
+                                    <input class="filters-category__field" name="category" type="radio" value="Straps">
+                                </label>
+                            </li>
+                        </ul> -->
+                    </div>
+
+                    <div class="filters__item filters-price form">
+                        <span class="filters__subtitle">Price Range</span>
+                        <div class="filters-price__content">
+                            <label class="sr-only" for="price-from">from</label>
+                            <input class="form__field" name="price-from" type="number" placeholder="$0" id="price-from">
+                            <span>to</span>
+                            <label class="sr-only" for="price-to">to</label>
+                            <input class="form__field" name="price-to" type="number" placeholder="$150" id="price-to">
+                        </div>
+                    </div>
+
+                    <div class="filters__item filters-check">
+                        <span class="filters__subtitle">Case Color</span>
+                        <ul class="filters-check__items">
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/charcoal-stone.png');"></span>
+                                </label>
+                            </li>
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="deep-ocean">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/deep-ocean.png');"></span>
+                                </label>
+                            </li>
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="cold-steel">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/cold-steel.png');"></span>
+                                </label>
+                            </li>
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/charcoal-stone.png');"></span>
+                                </label>
+                            </li>
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/charcoal-stone.png');"></span>
+                                </label>
+                            </li>
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="deep-ocean">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/deep-ocean.png');"></span>
+                                </label>
+                            </li>
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="cold-steel">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/cold-steel.png');"></span>
+                                </label>
+                            </li>
+                            <li class="filters-check__box">
+                                <label class="filters-check__item">
+                                    <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
+                                    <span class="filters-check__visible" style="background-image: url('img/catalog/case-color/charcoal-stone.png');"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="filters__btn button" type="button">Apply Filters</button>
+
+            </section>
+            <section class="products">
+                <select class="products__sort" name="" id="">
+                    <option value="test">test</option>
+                </select>
+                <h2 class="sr-only">Products</h2>
+                <ul class="products__items">
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                    <li class="products__item">
+                        @include('./../components/cards/_product-card.html', {
+                        'img' : '1',
+                        'alt' : 'Volumenzeit S 2',
+                        'title' : 'Volumenzeit S 2',
+                        'color' : 'Lavander Spark',
+                        'price' : '17,588'
+                        })
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+@include('./components/links/_head.html',
+{ 'title' : 'VOLUMENZEIT — DREAM WATCH | Catalog page' }
+)
+
+@include('./components/_header.html', {
+    'class' : ''
+})
+
+@include('./components/_breadcrums.html', {
+'count' : '1',
+'title' : 'Products',
+'item-current' : '356 Total Products'
+})
+
+<main class="main">
+    @include('./catalog-page/_catalog.html')
+</main>
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')
