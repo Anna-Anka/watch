@@ -6,6 +6,14 @@
 		background-color: $grey-100;
 	}
 
+    &--mobile {
+        display: none;
+
+        @include mq(sm) {
+            display: block;
+        }
+    }
+
 	&__nav {
 		@include flex-center-sb;
 	}

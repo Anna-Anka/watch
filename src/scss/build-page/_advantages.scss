@@ -1,0 +1,72 @@
+.advantages {
+	color: $white;
+	background-color: $black;
+	@include adaptiv-value('padding-top', 80, 55, 1);
+	@include adaptiv-value('padding-bottom', 80, 55, 1);
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		position: relative;
+		width: 100%;
+		max-width: 317px;
+		padding-left: 95px;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+		}
+
+		&::before {
+			top: 18px;
+			left: 0;
+			width: 65px;
+			height: 65px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 20px;
+
+			&::after {
+				top: -16px;
+				right: -40px;
+				width: 1px;
+				height: 120%;
+				background-color: $grey-500;
+			}
+		}
+
+		&--time {
+			&::before {
+				background-image: url('../img/advantages/time.svg');
+			}
+		}
+
+		&--money {
+			&::before {
+				background-image: url('../img/advantages/money.svg');
+			}
+		}
+
+		&--warrnity {
+			&::before {
+				background-image: url('../img/advantages/warrnity.svg');
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-weight: $fw-500;
+		font-size: 18px;
+		line-height: 0.9;
+	}
+
+	&__text {
+		color: $grey-400;
+	}
+}

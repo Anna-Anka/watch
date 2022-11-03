@@ -1,0 +1,48 @@
+.build {
+	position: relative;
+	padding: 50px 0;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		width: 42%;
+		height: 100%;
+		background-color: $grey-100;
+		content: '';
+	}
+
+	&__top {
+		@include flex-center-sb;
+	}
+
+	&__title {
+		margin-right: 10px;
+		color: $black;
+		font-weight: $fw-500;
+		font-size: 32px;
+		line-height: 0.5;
+	}
+
+	&__back {
+		position: relative;
+		padding: 22px 42px 22px 66px;
+		font-size: 14px;
+		line-height: 1;
+		background-color: $white;
+		border-radius: 5px;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 32px;
+			width: 12px;
+			height: 8px;
+			background-image: url('../img/icons/back.svg');
+			transform: translateY(-50%);
+			content: '';
+			@include bg-conatin;
+		}
+	}
+}

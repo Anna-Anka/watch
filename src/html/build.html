@@ -1,0 +1,27 @@
+@include('./components/links/_head.html',
+{ 'title' : 'VOLUMENZEIT — DREAM WATCH | Catalog page' }
+)
+
+@include('./components/_header.html', {
+    'class' : 'header--mobile'
+})
+
+<main class="main">
+    <section class="build">
+        <div class="container">
+            <div class="build__top">
+                <h1 class="build__title">Build your Watch</h1>
+                <a class="build__back" href="#">Back To Home</a>
+            </div>
+            <div class="build__wrapper">
+                <!-- @include('./catalog-page/_filters.html')
+                @include('./catalog-page/_products.html') -->
+            </div>
+        </div>
+    </section>
+    @include('./build-page/_advantages.html')
+</main>
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')
