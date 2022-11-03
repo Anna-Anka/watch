@@ -14,6 +14,9 @@
 @import './components/follow';
 @import './components/footer';
 
+// * cards
+@import './components/cards/product-card';
+
 // * templates
 //@import './templates/stepper';
 //@import './templates/accordion';
@@ -25,6 +28,7 @@
 @import './home-page/features';
 @import './home-page/stages';
 @import './home-page/mission';
+@import './home-page/watches';
 @import './home-page/about';
 @import './home-page/subscribe';
 
