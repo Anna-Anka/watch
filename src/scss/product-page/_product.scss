@@ -108,12 +108,9 @@
 		font-size: 12px;
 	}
 
-	&__list {
-		position: relative;
+	.characteristic {
 		margin-bottom: 22px;
 		padding: 14px 0 28px;
-		font-size: 10px;
-		line-height: 2.1;
 
 		@include mq(lg) {
 			order: 1;
@@ -141,56 +138,5 @@
 		&::after {
 			bottom: 0;
 		}
-	}
-
-	&__characteristic {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	&__name {
-		width: 30%;
-		margin-right: 8px;
-	}
-
-	&__meaning {
-		width: 68%;
-		text-align: right;
-	}
-
-	&__bottom {
-		@include mq(lg) {
-			margin-bottom: 30px;
-		}
-	}
-
-	&__order {
-		@include flex-center-sb;
-		margin-bottom: 22px;
-	}
-
-	&__price {
-		color: $black;
-		font-size: 20px;
-		line-height: 1;
-	}
-
-	&__custome {
-		max-width: 100%;
-	}
-}
-
-.custome {
-	padding: 12px 20px;
-	color: $black;
-	border: 1px solid $black;
-	border-radius: 5px;
-	@include flex-all-center;
-
-	&__icon {
-		width: 30px;
-		height: 30px;
-		margin-right: 10px;
-		border-radius: 5px;
 	}
 }

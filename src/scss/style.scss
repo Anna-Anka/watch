@@ -18,6 +18,13 @@
 // * cards
 @import './components/cards/product-card';
 
+// * filters
+@import './components/filters/filters';
+@import './components/filters/additionally';
+@import './components/filters/category';
+@import './components/filters/check';
+@import './components/filters/price';
+
 // * templates
 //@import './templates/stepper';
 //@import './templates/accordion';
@@ -35,7 +42,6 @@
 
 // * catalog-page
 @import './catalog-page/catalog';
-@import './catalog-page/filters';
 @import './catalog-page/products';
 
 // * product-page
@@ -50,7 +56,18 @@
 
 // * build-page
 @import './build-page/build';
+@import './build-page/build-about';
+@import './build-page/build-custome';
 @import './build-page/advantages';
 
 // * 404-page
 @import './404-page/error';
+
+/*
+
+* Для себя
+* 1) Переиспользовать фильтр
+* 2) Переиспользовать боттом из страницы товара
+* 3) Переиспользовать характеристики
+
+*/

@@ -1,0 +1,12 @@
+.filters-price {
+	&__content {
+		@include flex-center-sb;
+	}
+
+	.form {
+		&__field {
+			width: 100%;
+			max-width: 76px;
+		}
+	}
+}

@@ -1,0 +1,70 @@
+.build-custome {
+	width: 100%;
+	max-width: 382px;
+
+	&__item {
+		padding: 8px 30px 13px;
+		background-color: $white;
+		border-radius: 5px;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 3px;
+		color: $black;
+		font-size: 10px;
+	}
+
+	&__content {
+		margin-bottom: 12px;
+	}
+
+	.filters-check {
+		&__items {
+			display: grid;
+			grid-template-columns: repeat(5, 40px);
+			gap: 11px;
+		}
+	}
+
+	.product-buy {
+		margin-bottom: 37px;
+
+		&__order {
+			flex-direction: row-reverse;
+		}
+
+		&__price {
+			margin-right: 15px;
+		}
+
+		&__button {
+			margin-right: 0;
+		}
+	}
+
+	.characteristic {
+		padding-top: 33px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: -47px;
+			width: calc(100% + 47px);
+			height: 1px;
+			background-color: $grey-400;
+			content: '';
+		}
+
+		&__title {
+			margin-bottom: 28px;
+			color: $black;
+			font-weight: $fw-600;
+			font-size: 18px;
+			line-height: 1.8;
+		}
+	}
+}

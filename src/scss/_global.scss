@@ -107,10 +107,10 @@ body {
 			line-height: 1;
 		}
 
-        &--message {
-            min-height: 160px;
-            resize: none;
-        }
+		&--message {
+			min-height: 160px;
+			resize: none;
+		}
 	}
 
 	&__text {
@@ -119,5 +119,62 @@ body {
 
 	&__link {
 		font-weight: $fw-500;
+	}
+}
+
+.custome {
+	padding: 12px 20px;
+	color: $black;
+	border: 1px solid $black;
+	border-radius: 5px;
+	@include flex-all-center;
+
+	&__icon {
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		border-radius: 5px;
+	}
+}
+
+.product-buy {
+	&__order {
+		@include flex-center-sb;
+		margin-bottom: 22px;
+	}
+
+	&__price {
+		color: $black;
+		font-size: 20px;
+		line-height: 1;
+	}
+
+	&__custome {
+		max-width: 100%;
+	}
+
+	@include mq(lg) {
+		margin-bottom: 30px;
+	}
+}
+
+.characteristic {
+	position: relative;
+	font-size: 10px;
+	line-height: 2.1;
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__name {
+		width: 30%;
+		margin-right: 8px;
+	}
+
+	&__meaning {
+		width: 68%;
+		text-align: right;
 	}
 }
