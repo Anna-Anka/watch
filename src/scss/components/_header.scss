@@ -9,7 +9,7 @@
     &--mobile {
         display: none;
 
-        @include mq(sm) {
+        @include mq(lg) {
             display: block;
         }
     }

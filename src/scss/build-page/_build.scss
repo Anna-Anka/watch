@@ -1,17 +1,6 @@
 .build {
 	position: relative;
-	padding: 50px 0;
-
-	&::before {
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: -1;
-		width: 43%;
-		height: 100%;
-		background-color: $grey-100;
-		content: '';
-	}
+	padding-top: 50px;
 
 	&__top {
 		@include flex-center-sb;
@@ -45,10 +34,51 @@
 			content: '';
 			@include bg-conatin;
 		}
+
+		@include mq(lg) {
+			display: none;
+		}
 	}
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include mq(lg) {
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 65px;
+		}
+	}
+}
+
+.build-text {
+	@include mq(lg) {
+		display: none;
+	}
+
+	&--mobile {
+		display: none;
+
+		@include mq(lg) {
+			display: block;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: 20px;
+		color: $black;
+		font-weight: $fw-600;
+		font-size: 18px;
+
+		@include mq(lg) {
+			text-align: center;
+		}
+	}
+
+	&__content {
+		@include adaptiv-value('font-size', 14, 10, 1);
 	}
 }

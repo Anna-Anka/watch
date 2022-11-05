@@ -1,18 +1,12 @@
 .build-about {
 	width: 100%;
-	max-width: 635px;
+	max-width: 600px;
 	margin-right: 20px;
+    padding-bottom: 50px;
 
-	&__title {
-		margin-bottom: 20px;
-		color: $black;
-		font-weight: $fw-600;
-		font-size: 18px;
-	}
-
-	&__text {
-		@include adaptiv-value('font-size', 14, 10, 1);
-	}
+    @include mq(lg) {
+        margin: 0 auto;
+    }
 
 	&__slider {
 		width: 100%;
@@ -25,6 +19,11 @@
 		height: 590px;
 		margin-bottom: 12px;
 		overflow: hidden;
+
+        @include mq(lg) {
+            height: 80vw;
+            margin-bottom: 0;
+        }
 	}
 
 	&__img {
@@ -32,6 +31,12 @@
 		height: 100%;
 		object-fit: cover;
 	}
+
+    &__nav {
+        @include mq(md) {
+            display: none;
+        }
+    }
 
 	&__small {
 		flex-shrink: 0;
