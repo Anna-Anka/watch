@@ -1,0 +1,65 @@
+.checkout-shipping {
+	&__item {
+		min-height: 110px;
+		padding: 20px 30px 20px 20px;
+		color: $black;
+		background-color: $white;
+		border: 1px solid $grey-400;
+		border-radius: 5px;
+		cursor: pointer;
+		@include flex-center-sb;
+
+		&:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+
+    &__content {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+	&__control {
+        display: flex;
+        margin-right: 20px;
+	}
+
+	&__hidden {
+		&:checked + .checkout-shipping__visible {
+			background-color: $violet-400;
+		}
+	}
+
+	&__visible {
+		display: block;
+        @include adaptiv-value("width", 20, 15, 1);
+        @include adaptiv-value("height", 20, 15, 1);
+		background-color: transparent;
+		border: 1px solid $grey-400;
+		border-radius: 5px;
+		transition: background-color 0.4s;
+	}
+
+    &__about {
+        margin-right: 10px;
+    }
+
+    &__title,
+    &__text {
+        @include adaptiv-value("font-size", 14, 11, 1);
+    }
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 10, 11, 1);
+        line-height: 1;
+    }
+
+    &__text {
+        color: $grey-500;
+    }
+
+    &__price {
+        @include adaptiv-value("font-size", 18, 14, 1);
+    }
+}

@@ -63,11 +63,9 @@
 // * 404-page
 @import './404-page/error';
 
-/*
-
-* Для себя
-* 1) Переиспользовать фильтр
-* 2) Переиспользовать боттом из страницы товара
-* 3) Переиспользовать характеристики
-
-*/
+// * checkout-page
+@import './checkout-page/checkout';
+@import './checkout-page/checkout-form/checkout-form';
+@import './checkout-page/checkout-form/checkout-basic';
+@import './checkout-page/checkout-form/checkout-shipping';
+@import './checkout-page/checkout-form/checkout-payment';

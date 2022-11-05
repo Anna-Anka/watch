@@ -8,6 +8,10 @@
 	&__title {
 		color: $white;
 		@include adaptiv-value('margin-bottom', 25, 15, 1);
+
+        &--only {
+            text-align: center;
+        }
 	}
 
 	&__items {

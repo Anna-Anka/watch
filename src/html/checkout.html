@@ -1,0 +1,27 @@
+@include('./components/links/_head.html',
+{ 'title' : 'VOLUMENZEIT — DREAM WATCH | Catalog page' }
+)
+
+@include('./components/_header.html', {
+    'class' : 'header--background'
+})
+
+@include('./components/_breadcrums.html', {
+    'count' : 'only',
+    'title' : 'Checkout',
+})
+
+<main class="main">
+    <h1 class="sr-only">checkout</h1>
+    <div class="checkout">
+        <div class="container">
+            <div class="checkout__wrapper">
+                @include('./checkout-page/_checkout-form.html')
+            </div>
+        </div>
+    </div>
+</main>
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

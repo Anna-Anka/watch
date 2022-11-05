@@ -1,0 +1,30 @@
+.checkout-form {
+	width: 100%;
+	max-width: 520px;
+	margin-right: 20px;
+
+	&__list {
+		padding: 20px 34px 40px;
+		border: 1px solid $grey-400;
+		border-radius: 20px;
+
+        &:not(:last-child) {
+           @include adaptiv-value('margin-bottom', 20, 15, 1);
+        }
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 34, 25, 1);
+		@include adaptiv-value('font-size', 20, 16, 1);
+		display: inline-block;
+		color: $black;
+		font-weight: $fw-600;
+		line-height: 0.7;
+	}
+
+	.form {
+		&__field {
+			border: 1px solid $grey-400;
+		}
+	}
+}
