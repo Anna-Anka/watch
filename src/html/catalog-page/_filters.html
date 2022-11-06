@@ -1,7 +1,7 @@
 <section class="filters">
     <div class="filters__top">
         <h2 class="filters__title">Filters</h2>
-        <button class="filters__open" type="button" aria-expanded="false" aria-label="Open filters" aria-hidden="true"></button>
+        <button class="filters__open" type="button" aria-expanded="false" aria-label="Open filters" aria-expanded="false"></button>
     </div>
     <div class="filters__content">
         <div class="filters__items">
@@ -13,133 +13,133 @@
 
             <div class="filters__item filters-category">
                 <h3 class="filters__subtitle">Select Products</span>
-                <!-- Если это ссылки -->
-                <ul class="filters-category__items">
-                    <li class="filters-category__item">
-                        <a class="filters-category__link" href="#">Watches</a>
-                    </li>
-                    <li class="filters-category__item">
-                        <a class="filters-category__link" href="#">Straps</a>
-                    </li>
-                </ul>
+                    <!-- Если это ссылки -->
+                    <ul class="filters-category__items">
+                        <li class="filters-category__item">
+                            <a class="filters-category__link" href="#">Watches</a>
+                        </li>
+                        <li class="filters-category__item">
+                            <a class="filters-category__link" href="#">Straps</a>
+                        </li>
+                    </ul>
 
-                <!-- Если это радиокнопки -->
-                <!-- <ul class="filters-category__items">
-                                                <li class="filters-category__item">
-                                                    <label class="filters-category__item">
-                                                        Watches
-                                                        <input class="filters-category__field" name="category" type="radio" value="Watches">
-                                                    </label>
-                                                </li>
-                                                <li class="filters-category__item">
-                                                    <label class="filters-category__item">
-                                                        Straps
-                                                        <input class="filters-category__field" name="category" type="radio" value="Straps">
-                                                    </label>
-                                                </li>
-                                            </ul> -->
+                    <!-- Если это радиокнопки -->
+                    <!-- <ul class="filters-category__items">
+                        <li class="filters-category__item">
+                            <label class="filters-category__item">
+                                Watches
+                                <input class="filters-category__field" name="category" type="radio" value="Watches">
+                            </label>
+                        </li>
+                        <li class="filters-category__item">
+                            <label class="filters-category__item">
+                                Straps
+                                <input class="filters-category__field" name="category" type="radio" value="Straps">
+                            </label>
+                        </li>
+                    </ul> -->
             </div>
 
             <div class="filters__item filters-price form">
                 <span class="filters__subtitle">Price Range</span>
                 <div class="filters-price__content">
                     <label class="sr-only" for="price-from">from</label>
-                    <input class="form__field" name="price-from" type="number" placeholder="$0" id="price-from">
+                    <input class="form__field form__field--number" name="price-from" type="number" placeholder="$0" id="price-from">
                     <span>to</span>
                     <label class="sr-only" for="price-to">to</label>
-                    <input class="form__field" name="price-to" type="number" placeholder="$150" id="price-to">
+                    <input class="form__field form__field--number" name="price-to" type="number" placeholder="$150" id="price-to">
                 </div>
             </div>
 
             <div class="filters__item filters-check">
                 <h3 class="filters__subtitle">Case Color</span>
-                <ul class="filters-check__items">
-                    <li class="filters-check__box">
-                        <label class="filters-check__item">
-                            <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
-                            <div class="filters-check__visible">
-                                <picture>
-                                    <source srcset="img/catalog/case-color/charcoal-stone.avif" type="image/avif">
-                                    <source srcset="img/catalog/case-color/charcoal-stone.webp" type="image/webp">
-                                    <img class="filters-check__img" src="img/catalog/case-color/charcoal-stone.png" alt="charcoal-stone" width="40" height="40" loading="lazy">
-                                </picture>
-                            </div>
-                        </label>
-                    </li>
-                    <li class="filters-check__box">
-                        <label class="filters-check__item">
-                            <input class="filters-check__hidden" type="checkbox" name="color" value="deep-ocean">
-                            <div class="filters-check__visible">
-                                <picture>
-                                    <source srcset="img/catalog/case-color/deep-ocean.avif" type="image/avif">
-                                    <source srcset="img/catalog/case-color/deep-ocean.webp" type="image/webp">
-                                    <img class="filters-check__img" src="img/catalog/case-color/deep-ocean.png" alt="deep-ocean" width="40" height="40" loading="lazy">
-                                </picture>
-                            </div>
-                        </label>
-                    </li>
-                    <li class="filters-check__box">
-                        <label class="filters-check__item">
-                            <input class="filters-check__hidden" type="checkbox" name="color" value="cold-steel">
-                            <div class="filters-check__visible">
-                                <picture>
-                                    <source srcset="img/catalog/case-color/cold-steel.avif" type="image/avif">
-                                    <source srcset="img/catalog/case-color/cold-steel.webp" type="image/webp">
-                                    <img class="filters-check__img" src="img/catalog/case-color/cold-steel.png" alt="cold-steel" width="40" height="40" loading="lazy">
-                                </picture>
-                            </div>
-                        </label>
-                    </li>
-                    <li class="filters-check__box">
-                        <label class="filters-check__item">
-                            <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
-                            <div class="filters-check__visible">
-                                <picture>
-                                    <source srcset="img/catalog/case-color/charcoal-stone.avif" type="image/avif">
-                                    <source srcset="img/catalog/case-color/charcoal-stone.webp" type="image/webp">
-                                    <img class="filters-check__img" src="img/catalog/case-color/charcoal-stone.png" alt="charcoal-stone" width="40" height="40" loading="lazy">
-                                </picture>
-                            </div>
-                        </label>
-                    </li>
-                    </li>
-                    <li class="filters-check__box">
-                        <label class="filters-check__item">
-                            <input class="filters-check__hidden" type="checkbox" name="color" value="deep-ocean">
-                            <div class="filters-check__visible">
-                                <picture>
-                                    <source srcset="img/catalog/case-color/deep-ocean.avif" type="image/avif">
-                                    <source srcset="img/catalog/case-color/deep-ocean.webp" type="image/webp">
-                                    <img class="filters-check__img" src="img/catalog/case-color/deep-ocean.png" alt="deep-ocean" width="40" height="40" loading="lazy">
-                                </picture>
-                            </div>
-                        </label>
-                    </li>
-                    <li class="filters-check__box">
-                        <label class="filters-check__item">
-                            <input class="filters-check__hidden" type="checkbox" name="color" value="cold-steel">
-                            <div class="filters-check__visible">
-                                <picture>
-                                    <source srcset="img/catalog/case-color/cold-steel.avif" type="image/avif">
-                                    <source srcset="img/catalog/case-color/cold-steel.webp" type="image/webp">
-                                    <img class="filters-check__img" src="img/catalog/case-color/cold-steel.png" alt="cold-steel" width="40" height="40" loading="lazy">
-                                </picture>
-                            </div>
-                        </label>
-                    </li>
-                    <li class="filters-check__box">
-                        <label class="filters-check__item">
-                            <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
-                            <div class="filters-check__visible">
-                                <picture>
-                                    <source srcset="img/catalog/case-color/charcoal-stone.avif" type="image/avif">
-                                    <source srcset="img/catalog/case-color/charcoal-stone.webp" type="image/webp">
-                                    <img class="filters-check__img" src="img/catalog/case-color/charcoal-stone.png" alt="charcoal-stone" width="40" height="40" loading="lazy">
-                                </picture>
-                            </div>
-                        </label>
-                    </li>
-                </ul>
+                    <ul class="filters-check__items">
+                        <li class="filters-check__box">
+                            <label class="filters-check__item">
+                                <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
+                                <div class="filters-check__visible">
+                                    <picture>
+                                        <source srcset="img/catalog/case-color/charcoal-stone.avif" type="image/avif">
+                                        <source srcset="img/catalog/case-color/charcoal-stone.webp" type="image/webp">
+                                        <img class="filters-check__img" src="img/catalog/case-color/charcoal-stone.png" alt="charcoal-stone" width="40" height="40" loading="lazy">
+                                    </picture>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="filters-check__box">
+                            <label class="filters-check__item">
+                                <input class="filters-check__hidden" type="checkbox" name="color" value="deep-ocean">
+                                <div class="filters-check__visible">
+                                    <picture>
+                                        <source srcset="img/catalog/case-color/deep-ocean.avif" type="image/avif">
+                                        <source srcset="img/catalog/case-color/deep-ocean.webp" type="image/webp">
+                                        <img class="filters-check__img" src="img/catalog/case-color/deep-ocean.png" alt="deep-ocean" width="40" height="40" loading="lazy">
+                                    </picture>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="filters-check__box">
+                            <label class="filters-check__item">
+                                <input class="filters-check__hidden" type="checkbox" name="color" value="cold-steel">
+                                <div class="filters-check__visible">
+                                    <picture>
+                                        <source srcset="img/catalog/case-color/cold-steel.avif" type="image/avif">
+                                        <source srcset="img/catalog/case-color/cold-steel.webp" type="image/webp">
+                                        <img class="filters-check__img" src="img/catalog/case-color/cold-steel.png" alt="cold-steel" width="40" height="40" loading="lazy">
+                                    </picture>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="filters-check__box">
+                            <label class="filters-check__item">
+                                <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
+                                <div class="filters-check__visible">
+                                    <picture>
+                                        <source srcset="img/catalog/case-color/charcoal-stone.avif" type="image/avif">
+                                        <source srcset="img/catalog/case-color/charcoal-stone.webp" type="image/webp">
+                                        <img class="filters-check__img" src="img/catalog/case-color/charcoal-stone.png" alt="charcoal-stone" width="40" height="40" loading="lazy">
+                                    </picture>
+                                </div>
+                            </label>
+                        </li>
+                        </li>
+                        <li class="filters-check__box">
+                            <label class="filters-check__item">
+                                <input class="filters-check__hidden" type="checkbox" name="color" value="deep-ocean">
+                                <div class="filters-check__visible">
+                                    <picture>
+                                        <source srcset="img/catalog/case-color/deep-ocean.avif" type="image/avif">
+                                        <source srcset="img/catalog/case-color/deep-ocean.webp" type="image/webp">
+                                        <img class="filters-check__img" src="img/catalog/case-color/deep-ocean.png" alt="deep-ocean" width="40" height="40" loading="lazy">
+                                    </picture>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="filters-check__box">
+                            <label class="filters-check__item">
+                                <input class="filters-check__hidden" type="checkbox" name="color" value="cold-steel">
+                                <div class="filters-check__visible">
+                                    <picture>
+                                        <source srcset="img/catalog/case-color/cold-steel.avif" type="image/avif">
+                                        <source srcset="img/catalog/case-color/cold-steel.webp" type="image/webp">
+                                        <img class="filters-check__img" src="img/catalog/case-color/cold-steel.png" alt="cold-steel" width="40" height="40" loading="lazy">
+                                    </picture>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="filters-check__box">
+                            <label class="filters-check__item">
+                                <input class="filters-check__hidden" type="checkbox" name="color" value="charcoal-stone">
+                                <div class="filters-check__visible">
+                                    <picture>
+                                        <source srcset="img/catalog/case-color/charcoal-stone.avif" type="image/avif">
+                                        <source srcset="img/catalog/case-color/charcoal-stone.webp" type="image/webp">
+                                        <img class="filters-check__img" src="img/catalog/case-color/charcoal-stone.png" alt="charcoal-stone" width="40" height="40" loading="lazy">
+                                    </picture>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
             </div>
         </div>
         <button class="filters__btn button" type="button">Apply Filters</button>

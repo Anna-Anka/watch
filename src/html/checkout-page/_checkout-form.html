@@ -2,110 +2,119 @@
     <h2 class="sr-only">Form</h2>
     <form class="form" action="#">
         <fieldset class="checkout-form__list checkout-basic">
-            <span class="checkout-form__title">
-                <legend>Basic Info</legend>
-            </span>
-            <div class="checkout-basic__item">
-                <label class="sr-only" for="email">Enter your Email</label>
-                <input class="form__field" name="email" type="email" placeholder="Email" id="email" required>
+            <div class="checkout-form__top">
+                <legend class="checkout-form__title">Basic Info</legend>
+                <button class="checkout-form__collapse" type="button" aria-label="Close block" aria-expanded="true"></button>
             </div>
-            <div class="checkout-basic__item">
-                <label class="sr-only" for="first-name">Enter your First Name</label>
-                <input class="form__field" name="first-name" type="text" placeholder="First Name" id="first-name" required>
-            </div>
-            <div class="checkout-basic__item">
-                <label class="sr-only" for="last-name">Enter your Last Name</label>
-                <input class="form__field" name="last-name" type="text" placeholder="Last Name" id="last-name" required>
-            </div>
-            <div class="checkout-basic__item">
-                <label class="sr-only" for="tel">Enter your Phone Number</label>
-                <input class="form__field" name="tel" type="tel" placeholder="Phone Number" id="tel" required>
-            </div>
-            <div class="checkout-basic__item">
-                <label class="sr-only" for="address-1">Enter your Address 1</label>
-                <input class="form__field" name="address-1" type="text" placeholder="Address 1" id="address-1" required>
-            </div>
-            <div class="checkout-basic__item">
-                <label class="sr-only" for="address-2">Enter your Address 2</label>
-                <input class="form__field" name="address-2" type="text" placeholder="Address 2" id="address-2" required>
-            </div>
-            <div class="checkout-basic__items">
+            <div class="checkout-form__content">
                 <div class="checkout-basic__item">
-                    <label class="sr-only" for="city">Enter your City</label>
-                    <input class="form__field" name="city" type="text" placeholder="City" id="city" required>
+                    <label class="sr-only" for="email">Enter your Email</label>
+                    <input class="form__field" name="email" type="email" placeholder="Email" id="email" required>
                 </div>
                 <div class="checkout-basic__item">
-                    <label class="sr-only" for="zip-code">Enter your Zip Code</label>
-                    <input class="form__field" name="zip-code" type="text" placeholder="Zip Code" id="zip-code" required>
+                    <label class="sr-only" for="first-name">Enter your First Name</label>
+                    <input class="form__field" name="first-name" type="text" placeholder="First Name" id="first-name" required>
+                </div>
+                <div class="checkout-basic__item">
+                    <label class="sr-only" for="last-name">Enter your Last Name</label>
+                    <input class="form__field" name="last-name" type="text" placeholder="Last Name" id="last-name" required>
+                </div>
+                <div class="checkout-basic__item">
+                    <label class="sr-only" for="tel">Enter your Phone Number</label>
+                    <input class="form__field" name="tel" type="tel" placeholder="Phone Number" id="tel" required>
+                </div>
+                <div class="checkout-basic__item">
+                    <label class="sr-only" for="address-1">Enter your Address 1</label>
+                    <input class="form__field" name="address-1" type="text" placeholder="Address 1" id="address-1" required>
+                </div>
+                <div class="checkout-basic__item">
+                    <label class="sr-only" for="address-2">Enter your Address 2</label>
+                    <input class="form__field" name="address-2" type="text" placeholder="Address 2" id="address-2">
+                </div>
+                <div class="checkout-basic__items">
+                    <div class="checkout-basic__item">
+                        <label class="sr-only" for="city">Enter your City</label>
+                        <input class="form__field" name="city" type="text" placeholder="City" id="city" required>
+                    </div>
+                    <div class="checkout-basic__item">
+                        <label class="sr-only" for="zip-code">Enter your Zip Code</label>
+                        <input class="form__field" name="zip-code" type="text" placeholder="Zip Code" id="zip-code" required>
+                    </div>
                 </div>
             </div>
         </fieldset>
         <fieldset class="checkout-form__list checkout-shipping">
-            <span class="checkout-form__title">
-                <legend>Shipping</legend>
-            </span>
-            <label class="checkout-shipping__item">
-                <div class="checkout-shipping__content">
-                    <div class="checkout-shipping__control">
-                        <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express">
-                        <span class="checkout-shipping__visible"></span>
+            <div class="checkout-form__top">
+                <legend class="checkout-form__title">Shipping</legend>
+                <button class="checkout-form__collapse" type="button" aria-label="Close block" aria-expanded="true"></button>
+            </div>
+            <div class="checkout-form__content">
+                <label class="checkout-shipping__item">
+                    <div class="checkout-shipping__content">
+                        <div class="checkout-shipping__control">
+                            <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express" checked required>
+                            <span class="checkout-shipping__visible"></span>
+                        </div>
+                        <div class="checkout-shipping__about">
+                            <span class="checkout-shipping__title">UPS Express</span>
+                            <p class="checkout-shipping__text">
+                                UPS Express 2-3 working days
+                            </p>
+                        </div>
                     </div>
-                    <div class="checkout-shipping__about">
-                        <span class="checkout-shipping__title">UPS Express</span>
-                        <p class="checkout-shipping__text">
-                            UPS Express 2-3 working days
-                        </p>
+                    <span class="checkout-shipping__price">$49.99</span>
+                </label>
+                <label class="checkout-shipping__item">
+                    <div class="checkout-shipping__content">
+                        <div class="checkout-shipping__control">
+                            <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express">
+                            <span class="checkout-shipping__visible"></span>
+                        </div>
+                        <div class="checkout-shipping__about">
+                            <span class="checkout-shipping__title">UPS Standard</span>
+                            <p class="checkout-shipping__text">
+                                UPS Express 2-3 working days
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <span class="checkout-shipping__price">$49.99</span>
-            </label>
-            <label class="checkout-shipping__item">
-                <div class="checkout-shipping__content">
-                    <div class="checkout-shipping__control">
-                        <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express">
-                        <span class="checkout-shipping__visible"></span>
-                    </div>
-                    <div class="checkout-shipping__about">
-                        <span class="checkout-shipping__title">UPS Standard</span>
-                        <p class="checkout-shipping__text">
-                            UPS Express 2-3 working days
-                        </p>
-                    </div>
-                </div>
-                <span class="checkout-shipping__price">Free</span>
-            </label>
+                    <span class="checkout-shipping__price">Free</span>
+                </label>
+            </div>
         </fieldset>
         <fieldset class="checkout-form__list checkout-payment">
-            <span class="checkout-form__title">
-                <legend>Payment</legend>
-            </span>
-            <div class="checkout-payment__top"></div>
-            <div class="checkout-payment__content">
-                <div class="checkout-payment__item">
-                    <label class="sr-only" for="card">Enter your Card Number</label>
-                    <input class="form__field" name="card" type="number" placeholder="Card Number" id="card" required>
-                </div>
-                <div class="checkout-payment__items">
-                    <div class="checkout-payment__item">
-                        <label class="sr-only" for="date">Enter your Expiry Date</label>
-                        <input class="form__field" name="date" type="number" placeholder="Expiry Date" id="date" required>
-                    </div>
-                    <div class="checkout-payment__item">
-                        <label class="sr-only" for="cvc">Enter your CVC / CVV</label>
-                        <input class="form__field" name="cvc" type="number" placeholder="CVC / CVV" id="cvc" required>
-                    </div>
-                </div>
+            <div class="checkout-form__top">
+                <legend class="checkout-form__title">Payment</legend>
+                <button class="checkout-form__collapse" type="button" aria-label="Close block" aria-expanded="true"></button>
             </div>
-            <p class="checkout-payment__text">
-                Non-EU countries are subject to certain VAT and customs duties.
-            </p>
-            <button class="checkout-payment__button button" type="button">
-                checkout-payment
-            </button>
-            <p class="checkout-payment__subtext">
-                By placing your order you agree to our <a class="checkout-payment__link" href="#">Terms & Conditions</a> and you understand that we will
-                process your personal data on the basis of our <a class="checkout-payment__link" href="#">Privacy Policy</a>.
-            </p>
+            <div class="checkout-form__content">
+                <div class="checkout-payment__top"></div>
+                <div class="checkout-payment__content">
+                    <div class="checkout-payment__item">
+                        <label class="sr-only" for="card">Enter your Card Number</label>
+                        <input class="form__field form__field--number" name="card" type="number" placeholder="Card Number" id="card" required>
+                    </div>
+                    <div class="checkout-payment__items">
+                        <div class="checkout-payment__item">
+                            <label class="sr-only" for="date">Enter your Expiry Date</label>
+                            <input class="form__field form__field--number" name="date" type="number" placeholder="Expiry Date" id="date" required>
+                        </div>
+                        <div class="checkout-payment__item">
+                            <label class="sr-only" for="cvc">Enter your CVC / CVV</label>
+                            <input class="form__field form__field--number" name="cvc" type="number" placeholder="CVC / CVV" id="cvc" required>
+                        </div>
+                    </div>
+                </div>
+                <p class="checkout-payment__text">
+                    Non-EU countries are subject to certain VAT and customs duties.
+                </p>
+                <button class="checkout-payment__button button" type="submit">
+                    checkout-payment
+                </button>
+                <p class="checkout-payment__subtext">
+                    By placing your order you agree to our <a class="checkout-payment__link" href="#">Terms & Conditions</a> and you understand that we will
+                    process your personal data on the basis of our <a class="checkout-payment__link" href="#">Privacy Policy</a>.
+                </p>
+            </div>
         </fieldset>
     </form>
 </section>

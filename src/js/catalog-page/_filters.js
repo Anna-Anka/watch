@@ -8,7 +8,11 @@ export const filtersFunction = () => {
 
             if (filtersContent.classList.contains('filters__content--active')) {
                 filtersButton.setAttribute('aria-label', 'Close filters');
-            };
+                filtersButton.setAttribute('aria-expanded', 'true');
+            } else {
+                filtersButton.setAttribute('aria-label', 'Open filters');
+                filtersButton.setAttribute('aria-expanded', 'false');
+            }
         });
     };
 };

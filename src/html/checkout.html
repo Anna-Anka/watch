@@ -3,12 +3,12 @@
 )
 
 @include('./components/_header.html', {
-    'class' : 'header--background'
+'class' : 'header--background'
 })
 
 @include('./components/_breadcrums.html', {
-    'count' : 'only',
-    'title' : 'Checkout',
+'count' : 'only',
+'title' : 'Checkout',
 })
 
 <main class="main">
@@ -17,11 +17,14 @@
         <div class="container">
             <div class="checkout__wrapper">
                 @include('./checkout-page/_checkout-form.html')
+                @include('./checkout-page/_checkout-cart.html')
             </div>
         </div>
     </div>
 </main>
 
-@include('./components/_footer.html')
+@include('./components/_footer.html', {
+    'class' : 'footer--mobile'
+})
 
 @include('./components/links/_bottom.html')

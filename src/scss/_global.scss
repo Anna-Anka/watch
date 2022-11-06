@@ -98,9 +98,14 @@ body {
 	&__field {
 		width: 100%;
 		padding: 17px 30px;
+        color: $black;
 		line-height: 1;
 		background-color: $white;
 		border-radius: 5px;
+
+        &--number {
+            @include number;
+        }
 
 		&::placeholder {
 			color: $grey-500;

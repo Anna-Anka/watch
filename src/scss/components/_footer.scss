@@ -1,4 +1,13 @@
 .footer {
+
+    &--mobile {
+        display: none;
+
+        @include mq(lg) {
+            display: block;
+        }
+    }
+    
     &__container {
         display: flex;
         justify-content: center;

@@ -1,3 +1,4 @@
+@if(context.card === 'normal') {
 <article class="product-card">
     <a class="product-card__images" href="#">
         <div class="product-card__picture">
@@ -21,3 +22,43 @@
     <span class="product-card__color">@color</span>
     <span class="product-card__price">$@price</span>
 </article>
+}
+
+@if(context.card === 'small') {
+<article class="product-card product-card--small">
+    <a class="product-card__images" href="#">
+        <div class="product-card__picture">
+            <picture>
+                <source srcset="img/product-card/@img.avif" type="image/avif">
+                <source srcset="img/product-card/@img.webp" type="image/webp">
+                <img class="product-card__img" src="img/product-card/@img.jpg" alt="@alt" width="334" height="392" loading="lazy">
+            </picture>
+        </div>
+    </a>
+    <div class="product-card__info">
+        <h3 class="product-card__title">
+            <a href="#">@title</a>
+        </h3>
+        <span class="product-card__color">@color</span>
+        <span class="product-card__price">$@price</span>
+        <ul class="product-card__chars">
+            <li class="product-card__char">
+                <picture>
+                    <source srcset="img/catalog/case-color/@case-color.avif" type="image/avif">
+                    <source srcset="img/catalog/case-color/@case-color.webp" type="image/webp">
+                    <img class="product-card__preview" src="img/catalog/case-color/@case-color.png" alt="@alt" width="20" height="20" loading="lazy">
+                </picture>
+                Case Color
+            </li>
+            <li class="product-card__char">
+                <picture>
+                    <source srcset="img/catalog/dial-color/@dial-color.avif" type="image/avif">
+                    <source srcset="img/catalog/dial-color/@dial-color.webp" type="image/webp">
+                    <img class="product-card__preview" src="img/catalog/case-color/@dial-color.png" alt="@alt" width="20" height="20" loading="lazy">
+                </picture>
+                Strap Colors
+            </li>
+        </ul>
+    </div>
+</article>
+}

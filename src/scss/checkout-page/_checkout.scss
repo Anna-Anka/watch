@@ -4,6 +4,11 @@
 
 	&__wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+
+        @include mq(lg) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
 	}
 }
