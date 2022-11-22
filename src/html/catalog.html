@@ -17,7 +17,10 @@
         <div class="container">
             <div class="catalog__wrapper">
                 @include('./catalog-page/_filters.html')
-                @include('./catalog-page/_products.html')
+                <section class="products">
+                    @include('./catalog-page/_products.html')
+                    @include('./catalog-page/_bottom.html')
+                </section>
             </div>
         </div>
     </div>

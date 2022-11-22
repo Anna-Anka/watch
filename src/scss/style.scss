@@ -13,6 +13,8 @@
 @import './components/breadcrums';
 @import './components/follow';
 @import './components/pagination';
+@import './components/characteristic';
+@import './components/form';
 @import './components/footer';
 
 // * cards
@@ -43,6 +45,7 @@
 // * catalog-page
 @import './catalog-page/catalog';
 @import './catalog-page/products';
+@import './catalog-page/choices';
 
 // * product-page
 @import './product-page/product';

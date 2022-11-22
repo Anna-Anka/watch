@@ -1,0 +1,32 @@
+.form {
+	&__field {
+		width: 100%;
+		padding: 17px 30px;
+        color: $black;
+		line-height: 1;
+		background-color: $white;
+		border-radius: 5px;
+
+        &--number {
+            @include number;
+        }
+
+		&::placeholder {
+			color: $grey-500;
+			line-height: 1;
+		}
+
+		&--message {
+			min-height: 160px;
+			resize: none;
+		}
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 14, 10, 1);
+	}
+
+	&__link {
+		font-weight: $fw-500;
+	}
+}

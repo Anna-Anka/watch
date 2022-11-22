@@ -21,6 +21,11 @@ export const buildSwiper = () => {
             thumbs: {
                 swiper: swiperSmall,
             },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     };
 };

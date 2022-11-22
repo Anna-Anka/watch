@@ -29,4 +29,32 @@
 			height: 300px;
 		}
 	}
+
+	&__bottom {
+		@include flex-center-sb;
+		flex-wrap: wrap;
+
+		@include mq(lg) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__pagination {
+		margin-right: 10px;
+
+		@include mq(lg) {
+			margin-right: 0;
+		}
+	}
+
+	&__button {
+		@include mq(lg) {
+			margin-bottom: 25px;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+		}
+	}
 }
+

@@ -2,11 +2,11 @@
 	width: 100%;
 	max-width: 600px;
 	margin-right: 20px;
-    padding-bottom: 50px;
+	padding-bottom: 50px;
 
-    @include mq(lg) {
-        margin: 0 auto;
-    }
+	@include mq(lg) {
+		margin: 0 auto;
+	}
 
 	&__slider {
 		width: 100%;
@@ -20,10 +20,10 @@
 		margin-bottom: 12px;
 		overflow: hidden;
 
-        @include mq(lg) {
-            height: 80vw;
-            margin-bottom: 0;
-        }
+		@include mq(lg) {
+			height: 80vw;
+			margin-bottom: 0;
+		}
 	}
 
 	&__img {
@@ -32,17 +32,12 @@
 		object-fit: cover;
 	}
 
-    &__nav {
-        @include mq(md) {
-            display: none;
-        }
-    }
-
 	&__small {
 		flex-shrink: 0;
 		max-width: 100%;
-		height: 170px;
+		@include adaptiv-value('height', 170, 104, 1);
 		overflow: hidden;
+		@include adaptiv-value('margin-bottom', 32, 25, 1);
 	}
 
 	&__thumb,
@@ -65,5 +60,13 @@
 		.build-about__img {
 			border-radius: 8px;
 		}
+	}
+
+	&__buttons {
+		@include flex-all-center;
+	}
+
+	&__button {
+		@include slider-arrow;
 	}
 }

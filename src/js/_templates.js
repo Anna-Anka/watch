@@ -99,16 +99,18 @@ import 'fslightbox'
 // im.mask(inputs)
 
 // * Подключение choices.js
-// import Choices from "choices.js";
+import Choices from "choices.js";
 
-// const defaultSelect = () => {
-//     const element = document.querySelector('.default');
-//     const choices = new Choices(element, {
-//         searchEnabled: false
-//     });   
-// }
+if (document.querySelector('.products__sort')) {
+    const defaultSelect = () => {
+        const element = document.querySelector('.products__sort');
+        const choices = new Choices(element, {
+            searchEnabled: false
+        });
+    }
 
-// defaultSelect()
+    defaultSelect()
+}
 
 // * Подключение just-validate
 //import JustValidate from "just-validate";

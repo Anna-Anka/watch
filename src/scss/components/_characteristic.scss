@@ -1,0 +1,20 @@
+.characteristic {
+	position: relative;
+	font-size: 10px;
+	line-height: 2.1;
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__name {
+		width: 30%;
+		margin-right: 8px;
+	}
+
+	&__meaning {
+		width: 68%;
+		text-align: right;
+	}
+}

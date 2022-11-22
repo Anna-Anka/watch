@@ -91,40 +91,6 @@ body {
 	color: $black;
 	font-family: $space;
 	line-height: 1;
-	text-transform: uppercase;
-}
-
-.form {
-	&__field {
-		width: 100%;
-		padding: 17px 30px;
-        color: $black;
-		line-height: 1;
-		background-color: $white;
-		border-radius: 5px;
-
-        &--number {
-            @include number;
-        }
-
-		&::placeholder {
-			color: $grey-500;
-			line-height: 1;
-		}
-
-		&--message {
-			min-height: 160px;
-			resize: none;
-		}
-	}
-
-	&__text {
-		@include adaptiv-value('font-size', 14, 10, 1);
-	}
-
-	&__link {
-		font-weight: $fw-500;
-	}
 }
 
 .custome {
@@ -143,9 +109,13 @@ body {
 }
 
 .product-buy {
+    &__order,
+    &__custome {
+        margin-bottom: 22px;
+    }
+
 	&__order {
 		@include flex-center-sb;
-		margin-bottom: 22px;
 	}
 
 	&__price {
@@ -163,23 +133,3 @@ body {
 	}
 }
 
-.characteristic {
-	position: relative;
-	font-size: 10px;
-	line-height: 2.1;
-
-	&__item {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	&__name {
-		width: 30%;
-		margin-right: 8px;
-	}
-
-	&__meaning {
-		width: 68%;
-		text-align: right;
-	}
-}
