@@ -9,6 +9,33 @@
 		}
 	}
 
+    &__item {
+        position: relative;
+
+		&::before {
+			position: absolute;
+			bottom: -30px;
+			left: 0;
+			width: 80px;
+			color: $white;
+			font-size: 8px;
+			line-height: 3;
+			text-align: center;
+			background-color: $black;
+			border-radius: 3px;
+			transform: translateX(-30%);
+			opacity: 0;
+			transition: opacity 0.4s;
+			content: attr(data-title);
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+    }
+
 	&__hidden {
 		@include hidden;
 
