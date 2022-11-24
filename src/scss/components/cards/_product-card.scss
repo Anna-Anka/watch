@@ -137,5 +137,69 @@
 		.product-card__color {
 			font-size: 10px;
 		}
+
+		.product-card__delete {
+			@include bg-conatin;
+			position: absolute;
+			top: 20px;
+			right: 0;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/delete.svg');
+			background-size: 10px;
+		}
+	}
+
+	&--additional {
+		display: flex;
+		align-items: center;
+
+		.product-card__images {
+			max-width: 60px;
+			height: 70px;
+			margin-right: 8px;
+			margin-bottom: 0;
+			border-radius: 8px;
+		}
+
+		.product-card__picture {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.product-card__info {
+			text-align: left;
+		}
+
+		.product-card__title {
+			margin-bottom: 8px;
+			color: $grey-500;
+			font-size: 10px;
+		}
+
+		.product-card__price {
+			margin-bottom: 4px;
+			font-size: 20px;
+		}
+
+        .product-card__add {
+            position: relative;
+            padding-left: 13px;
+            color: $grey-500;
+            font-size: 10px;
+            line-height: 2.1;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                background-image: url('../img/icons/plus.svg');
+                transform: translateY(-50%);
+                content: "";
+                @include bg-conatin;
+            }
+        }
 	}
 }

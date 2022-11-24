@@ -34,6 +34,12 @@
 		}
 	}
 
+    .product-card {
+        &__delete {
+            display: none;
+        }
+    }
+
 	&__total {
 		position: relative;
 		padding: 22px;
