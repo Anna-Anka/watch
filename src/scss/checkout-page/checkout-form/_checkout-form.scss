@@ -59,6 +59,14 @@
 		@include adaptiv-value('padding-top', 34, 25, 1);
 	}
 
+    &__box {
+        margin-bottom: 20px;
+    }
+
+    &__next {
+        width: 100%;
+    }
+
 	.form {
 		&__field {
 			border: 1px solid $grey-400;

@@ -78,7 +78,7 @@ const modal = new GraphModal('modal');
 // const scroll = new SmoothScroll('a[href*="#"]');
 
 // * Подключение галереи (Fullscreen Lightbox)
-import 'fslightbox'
+//import 'fslightbox'
 
 // * Подключение mixit up
 //import mixitup from 'mixitup';
@@ -104,6 +104,17 @@ import Choices from "choices.js";
 if (document.querySelector('.products__sort')) {
     const defaultSelect = () => {
         const element = document.querySelector('.products__sort');
+        const choices = new Choices(element, {
+            searchEnabled: false
+        });
+    }
+
+    defaultSelect()
+}
+
+if (document.querySelector('.checkout-basic__select')) {
+    const defaultSelect = () => {
+        const element = document.querySelector('.checkout-basic__select');
         const choices = new Choices(element, {
             searchEnabled: false
         });

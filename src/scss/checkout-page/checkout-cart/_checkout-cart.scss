@@ -16,6 +16,10 @@
 			.checkout-cart__box {
 				display: none;
 			}
+
+            .checkout-cart__button {
+                transform: rotate(0);
+            }
 		}
 	}
 
@@ -70,7 +74,9 @@
 		height: 10px;
 		background-image: url('../img/icons/check.svg');
 		background-size: 10px;
+        transform: rotate(180deg);
 		@include bg-conatin;
+        transition: transform 0.4s;
 
 		&::before {
 			position: absolute;
