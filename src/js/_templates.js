@@ -166,5 +166,5 @@ if (document.querySelector('.checkout-basic__select')) {
 // headerSticky()
 
 // * Подключение плавного скролла
-// import { smoothScroll } from "./templates/smooth-scroll";
-// smoothScroll()
+import { smoothScroll } from "./templates/smooth-scroll";
+smoothScroll()
