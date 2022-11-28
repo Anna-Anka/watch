@@ -68,6 +68,7 @@
 		}
 
 		&::before {
+            @include bg-conatin;
 			position: absolute;
 			top: 50%;
 			left: 0;
@@ -80,7 +81,6 @@
 			@include adaptiv-value('width', 114, 60, 1);
 			@include adaptiv-value('height', 114, 60, 1);
             @include adaptiv-value('background-size', 65, 30, 1);
-			@include bg-conatin;
 
             @include mq(lg) {
                 display: none;

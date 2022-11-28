@@ -42,6 +42,29 @@ burger()
 import GraphModal from 'graph-modal';
 const modal = new GraphModal('modal');
 
+if (document.querySelector('.btn-thank')) {
+    const btnThank = document.querySelector('.btn-thank')
+    btnThank.addEventListener('click', () => {
+        const modal = new GraphModal('modal').open('thank');
+        btnThank.classList.add('btn-thank--active')
+
+        const modalBody = document.querySelector('.graph-modal')
+        const modalContainerThank = document.querySelector('.graph-modal__container--thank')
+
+        modalBody.addEventListener('click', (e) => {
+            if (e.target !== modalContainerThank && !modalContainerThank.contains(e.target)) {
+                btnThank.classList.remove('btn-thank--active')
+            }
+        });
+    });
+
+    const url = window.location.href;
+    if (url.indexOf('thank.html') != -1) {
+        btnThank.click();
+    }
+    //btnThank.click();
+}
+
 // * Реализация табов
 //import GraphTabs from 'graph-tabs';
 //const tabs = new GraphTabs('tab');

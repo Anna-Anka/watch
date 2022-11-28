@@ -14,6 +14,6 @@ export const watchesSwiper = () => {
                     prevEl: watches.querySelector('.swiper-button-prev'),
                 },
             });
-        })
+        });
     };
 };
