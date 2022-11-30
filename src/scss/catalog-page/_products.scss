@@ -1,7 +1,7 @@
 .products {
 	width: 100%;
 	max-width: 825px;
-	padding-top: 45px;
+	padding-top: 24px;
 
 	&__sort {
 		margin-bottom: 32px;
@@ -13,6 +13,7 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px 25px;
 		@include adaptiv-value('margin-bottom', 70, 40, 1);
+        padding-top: 24px;
 
 		@include mq(lg) {
 			grid-template-columns: repeat(2, 1fr);
@@ -48,6 +49,8 @@
 	}
 
 	&__button {
+        @include adaptiv-value("padding-right", 109, 20, 1);
+        @include adaptiv-value("padding-left", 109, 20, 1);
 		@include mq(lg) {
 			margin-bottom: 25px;
 		}

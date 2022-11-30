@@ -1,13 +1,16 @@
 .products {
 	.choices {
 		width: 100%;
-		max-width: 180px;
+		max-width: 160px;
+		margin-bottom: 0;
 		margin-left: auto;
 		font-size: 14px;
 
 		&__inner {
-			padding: 22px 22px 22px 56px;
+			padding: 17px;
+			padding-left: 30px;
 			line-height: 1;
+			text-align: center;
 			background-color: $grey-100;
 			border: 0;
 			border-radius: 5px;
@@ -20,7 +23,7 @@
 
 		&[data-type*='select-one'] {
 			.choices__inner {
-				padding-bottom: 22px;
+				padding-bottom: 17px;
 			}
 		}
 
@@ -45,6 +48,10 @@
 			}
 		}
 
+		&__list--dropdown {
+			padding: 15px;
+		}
+
 		&__list--dropdown,
 		&__list[aria-expanded] {
 			border: 0;
@@ -56,8 +63,19 @@
 			transform: translateY(-50%) rotate(180deg);
 		}
 
-        .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
-            padding-right: 10px;
-        }
+		.choices__list--dropdown .choices__item--selectable,
+		.choices__list[aria-expanded] .choices__item--selectable {
+			padding-right: 0;
+		}
+
+		.choices__list--dropdown .choices__item--selectable.is-highlighted,
+		.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+			background-color: $white;
+		}
+
+		.choices__list--dropdown .choices__item,
+		.choices__list[aria-expanded] .choices__item {
+			padding: 1px 0;
+		}
 	}
 }

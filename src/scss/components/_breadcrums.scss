@@ -8,6 +8,7 @@
 	&__title {
 		color: $white;
 		@include adaptiv-value('margin-bottom', 25, 15, 1);
+        line-height: 0.5;
 
         &--only {
             text-align: center;
@@ -23,6 +24,7 @@
 	&__item {
 		position: relative;
 		padding-right: 10px;
+        line-height: 1.2;
 
 		&::before {
 			position: absolute;

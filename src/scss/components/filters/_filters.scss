@@ -106,10 +106,22 @@
 		line-height: 2;
 	}
 
+    &__btn {
+        width: 100%;
+    }
+
 	.form {
 		&__field {
 			padding: 7px;
 			font-size: 12px;
 		}
 	}
+}
+
+.filters-search {
+    .form {
+        &__field {
+            padding-left: 16px;
+        }
+    }
 }

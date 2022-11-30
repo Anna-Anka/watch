@@ -21,6 +21,10 @@
 
 	&__swiper {
 		padding-left: 20px;
+
+		@include mq(sm) {
+			padding-left: 0;
+		}
 	}
 
 	&__items {
@@ -28,6 +32,17 @@
 	}
 
 	&__item {
+		display: flex;
+		justify-content: center;
+		max-width: 333px;
+
+		@include mq(sm) {
+			max-width: 100%;
+		}
+	}
+
+	.product-card {
+		width: 100%;
 		max-width: 333px;
 	}
 

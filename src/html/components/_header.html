@@ -2,7 +2,11 @@
     <div class="container">
         <nav class="header__nav">
             <a class="header__logo logo" href="#">
-                <img class="logo__img" href="#" src="img/logo.svg" alt="logo" width="384" height="48" loading="lazy">
+                <picture>
+                    <source srcset="img/logo.avif" type="image/avif">
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img class="logo__img" src="img/logo.png" alt="logo" width="384" height="48" loading="lazy">
+                </picture>
             </a>
             <div class="menu" data-menu>
                 <ul class="menu__items">
@@ -18,9 +22,6 @@
                     <li class="menu__item">
                         <a class="menu__link" href="#">Brand</a>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Watches</a>
-                    </li>
                 </ul>
                 <a class="menu__design button" href="#">
                     Design you watch
@@ -30,18 +31,20 @@
                         <button class="nav-user__button nav-user__button--account" type="button">
                             My Account
                         </button>
-                        <ul class="nav-user__drop">
-                            <li class="nav-user__item">
-                                <a class="nav-user__registr button" href="#">
-                                    Log in
-                                </a>
-                            </li>
-                            <li class="nav-user__item">
-                                <a class="nav-user__registr nav-user__registr--sign button" href="#">
-                                    sign up
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="nav-user__drop">
+                            <ul class="nav-user__items">
+                                <li class="nav-user__item">
+                                    <a class="nav-user__registr button" href="#">
+                                        Log in
+                                    </a>
+                                </li>
+                                <li class="nav-user__item">
+                                    <a class="nav-user__registr nav-user__registr--sign button" href="#">
+                                        sign up
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <button class="nav-user__button nav-user__button--cart" type="button" data-graph-path="cart">
                         Cart
