@@ -1,6 +1,5 @@
 .header {
-	@include adaptiv-value('padding-top', 24, 15, 1);
-	@include adaptiv-value('padding-bottom', 24, 15, 1);
+	padding: 15px 0;
 
 	&--background {
 		background-color: $grey-100;

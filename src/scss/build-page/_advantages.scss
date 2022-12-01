@@ -3,6 +3,7 @@
 	background-color: $black;
 	@include adaptiv-value('padding-top', 80, 55, 1);
 	@include adaptiv-value('padding-bottom', 80, 55, 1);
+    @include adaptiv-value('margin-bottom', 77, 50, 1);
 
 	&__items {
 		display: flex;
@@ -30,6 +31,7 @@
 		}
 
 		&::before {
+            @include bg-conatin;
 			top: 14px;
 			left: 0;
 			width: 65px;

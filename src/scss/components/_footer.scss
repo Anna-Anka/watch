@@ -14,8 +14,8 @@
     }
     
 	&__top {
-		padding: 85px 0 60px;
-		@include adaptiv-value('padding-top', 85, 50, 1);
+		// padding: 85px 0 60px;
+		// @include adaptiv-value('padding-top', 85, 50, 1);
 		@include adaptiv-value('padding-bottom', 65, 30, 1);
 	}
 

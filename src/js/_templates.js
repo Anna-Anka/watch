@@ -128,7 +128,8 @@ if (document.querySelector('.products__sort')) {
     const defaultSelect = () => {
         const element = document.querySelector('.products__sort');
         const choices = new Choices(element, {
-            searchEnabled: false
+            searchEnabled: false,
+            sorter: () => {},
         });
     }
 
@@ -139,7 +140,8 @@ if (document.querySelector('.checkout-basic__select')) {
     const defaultSelect = () => {
         const element = document.querySelector('.checkout-basic__select');
         const choices = new Choices(element, {
-            searchEnabled: false
+            searchEnabled: false,
+            sorter: () => {},
         });
     }
 

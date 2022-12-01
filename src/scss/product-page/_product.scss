@@ -89,23 +89,32 @@
 		@include slider-arrow;
 	}
 
-	&__title,
-	&__text {
-		margin-bottom: 20px;
-
-		@include mq(lg) {
-			text-align: center;
-		}
+	&__title {
+		@include adaptiv-value('font-size', 30, 28, 1);
+		margin-bottom: 15px;
+		color: $black;
+		font-weight: $fw-500;
+		line-height: 0.4;
 	}
 
-	&__title {
-		@include adaptiv-value('font-size', 32, 28, 1);
-		color: $black;
-		line-height: 0.6;
+	&__subtitle {
+		display: inline-block;
+		margin-bottom: 17px;
+		font-size: 14px;
+		line-height: 1.2;
 	}
 
 	&__text {
 		font-size: 12px;
+		@include adaptiv-value('margin-bottom', 34, 30, 1);
+	}
+
+	&__title,
+	&__subtitle,
+	&__text {
+		@include mq(lg) {
+			text-align: center;
+		}
 	}
 
 	.characteristic {

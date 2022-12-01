@@ -3,6 +3,11 @@
 	padding: 32px 0 60px;
 	background-color: $grey-100;
 
+	@include mq(lg) {
+		margin-bottom: 2px;
+		background-color: $white;
+	}
+
 	&::before {
 		position: absolute;
 		right: 0;
@@ -14,6 +19,10 @@
 		background-color: $grey-100;
 		transform: translateY(100%);
 		content: '';
+
+		@include mq(lg) {
+			display: none;
+		}
 	}
 
 	&__wrapper {

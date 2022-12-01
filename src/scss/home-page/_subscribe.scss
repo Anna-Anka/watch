@@ -2,6 +2,7 @@
 	position: relative;
 	z-index: 2;
 	padding: 65px 0;
+    @include adaptiv-value('margin-bottom', 90, 50, 1);
 	color: $white;
 	text-align: center;
 	@include bg-cover;

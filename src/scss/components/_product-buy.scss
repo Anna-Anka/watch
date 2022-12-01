@@ -1,0 +1,38 @@
+.product-buy {
+	&__order,
+	&__custome {
+		margin-bottom: 22px;
+	}
+
+	&__order {
+		@include flex-center-sb;
+	}
+
+	&__price {
+		width: 40%;
+		color: $black;
+		font-size: 20px;
+		line-height: 1;
+		text-align: center;
+
+        @include mq(lg) {
+            width: 50%;
+        }
+
+        @include mq(sm) {
+            width: 40%;
+        }
+	}
+
+	&__custome {
+		max-width: 100%;
+	}
+
+	@include mq(lg) {
+		margin-bottom: 30px;
+	}
+
+    &__button {
+        padding: 22px 52px;
+    }
+}

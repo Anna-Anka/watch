@@ -107,29 +107,3 @@ body {
 		border-radius: 5px;
 	}
 }
-
-.product-buy {
-    &__order,
-    &__custome {
-        margin-bottom: 22px;
-    }
-
-	&__order {
-		@include flex-center-sb;
-	}
-
-	&__price {
-		color: $black;
-		font-size: 20px;
-		line-height: 1;
-	}
-
-	&__custome {
-		max-width: 100%;
-	}
-
-	@include mq(lg) {
-		margin-bottom: 30px;
-	}
-}
-
