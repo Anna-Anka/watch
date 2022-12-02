@@ -139,20 +139,18 @@
 
 		.product-card__price {
 			margin-bottom: 15px;
+            font-size: 20px;
 		}
 
-		.product-card__title,
-		.product-card__price {
-			font-size: 14px;
-		}
-
-		.product-card__title,
-		.product-card__color {
-			margin-bottom: 9px;
+		.product-card__title {
+            margin-bottom: 5px;
+			font-size: 12px;
 		}
 
 		.product-card__color {
+            margin-bottom: 13px;
 			font-size: 10px;
+            line-height: 1;
 		}
 
 		.product-card__delete {

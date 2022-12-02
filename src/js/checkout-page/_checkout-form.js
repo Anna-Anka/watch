@@ -34,7 +34,7 @@ export const checkoutForm = () => {
         anchors.forEach(el => {
             el.addEventListener('click', function (e) {
                 const blockId = el.getAttribute('data-goto').substr(1);
-                const block = document.getElementById(blockId);
+                const block = document.getElementById(blockId).closest('.checkout-form__list');
                 block.classList.remove('checkout-form__list--collapsed');
             });
         });

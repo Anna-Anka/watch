@@ -6,6 +6,8 @@ export const checkoutCart = () => {
         checkoutButton.addEventListener('click', () => {
             checkoutButton.closest('.checkout-cart__content').classList.toggle('checkout-cart__content--collapsed')
 
+            console.log('dsada')
+
             if (checkoutContent.classList.contains('checkout-cart__content--collapsed')) {
                 checkoutButton.setAttribute('aria-label', 'Open list');
                 checkoutButton.setAttribute('aria-expanded', 'false');

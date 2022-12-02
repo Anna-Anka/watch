@@ -52,13 +52,19 @@
                             <option value="Bhutan">Bhutan</option>
                             <option value="Bolivia">Bolivia</option>
                             <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
                         </select>
                     </div>
                 </div>
                 <a class="checkout-form__next button" href="#" data-goto="#shipping">Countiniue</a>
             </div>
         </fieldset>
-        <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-shipping" id="shipping">
+        <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-shipping">
             <div class="checkout-form__top">
                 <legend class="checkout-form__title">Shipping</legend>
                 <button class="checkout-form__collapse" type="button" aria-label="Open block" aria-expanded="false"></button>
@@ -96,10 +102,10 @@
                         <span class="checkout-shipping__price">Free</span>
                     </label>
                 </div>
-                <a class="checkout-form__next button" href="#" data-goto="#payment">Countiniue</a>
+                <a class="checkout-form__next button" href="#" id="shipping" data-goto="#payment">Countiniue</a>
             </div>
         </fieldset>
-        <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-payment" id="payment">
+        <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-payment">
             <div class="checkout-form__top">
                 <legend class="checkout-form__title">Payment</legend>
                 <button class="checkout-form__collapse" type="button" aria-label="Open block" aria-expanded="false"></button>
@@ -178,8 +184,8 @@
                 <p class="checkout-payment__text">
                     Non-EU countries are subject to certain VAT and customs duties.
                 </p>
-                <button class="checkout-payment__button button" type="submit">
-                    checkout-payment
+                <button class="checkout-payment__button button" type="submit" id="payment">
+                    Complete Payment
                 </button>
                 <p class="checkout-payment__subtext">
                     By placing your order you agree to our <a class="checkout-payment__link" href="#">Terms & Conditions</a> and you understand that we will
