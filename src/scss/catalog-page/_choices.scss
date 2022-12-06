@@ -6,6 +6,10 @@
 		margin-left: auto;
 		font-size: 14px;
 
+        @include mq(sm) {
+            margin: 0 auto;
+        }
+
 		&__inner {
 			padding: 17px;
 			padding-left: 30px;
@@ -50,6 +54,7 @@
 
 		&__list--dropdown {
 			padding: 15px;
+            box-shadow: 0 40px 40px rgba(114, 117, 119, 0.25);
 		}
 
 		&__list--dropdown,

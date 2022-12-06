@@ -31,8 +31,9 @@
 	}
 
 	@include mq(md) {
-		margin-bottom: 50px;
-		padding: 36px 0;
+		max-width: 100%;
+		margin-right: 0;
+		padding: 24px 0;
 	}
 
 	&__top {
@@ -46,25 +47,27 @@
 	&__title {
 		margin-right: 10px;
 		color: $black;
-		font-size: 28px;
+        @include adaptiv-value("font-size", 28, 16, 1);
 		font-family: $space;
 		line-height: 1;
 	}
 
 	&__open {
-		flex: 0 0 55px;
-		width: 55px;
-		height: 55px;
+        @include bg-conatin;
+		flex: 0 0 25px;
+		width: 25px;
+		height: 25px;
 		background-image: url('../img/icons/arrow-up.svg');
-		background-size: 36px 20px;
+		background-size: 18px 12px;
 		border: 1px solid $violet-400;
 		border-radius: 5px;
-		@include bg-conatin;
 	}
 
 	&__content {
 		@include mq(md) {
 			display: none;
+			max-width: 372px;
+			margin: 0 auto;
 			padding-top: 30px;
 		}
 
@@ -106,9 +109,9 @@
 		line-height: 2;
 	}
 
-    &__btn {
-        width: 100%;
-    }
+	&__btn {
+		width: 100%;
+	}
 
 	.form {
 		&__field {
@@ -119,9 +122,9 @@
 }
 
 .filters-search {
-    .form {
-        &__field {
-            padding-left: 16px;
-        }
-    }
+	.form {
+		&__field {
+			padding-left: 16px;
+		}
+	}
 }

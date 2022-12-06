@@ -68,24 +68,22 @@
 	margin-top: 0;
 
 	&:not(:last-child) {
-		@include adaptiv-value('margin-right', 70, 50, 1);
+        margin-right: 70px;
 	}
 
 	&::after {
 		top: 50%;
-		left: 0;
+		left: 50%;
 		width: 14px;
 		height: 14px;
 		font-size: 0;
-		background-image: url('../img/icons/arrow-small.svg');
+		background-image: url('../img/icons/arrow-slider.svg');
 		@include bg-conatin;
-		filter: invert(66%) sepia(98%) saturate(2642%) hue-rotate(233deg)
-			brightness(105%) contrast(107%);
 	}
 
 	&--prev {
 		&::after {
-			transform: translateX(-5%) rotate(90deg);
+			transform: translateX(14%);
 		}
 
         &::before {
@@ -94,15 +92,16 @@
             height: 1px;
             background-color: $grey-300;
             top: 50%;
-            @include adaptiv-value('width', 30, 20, 1);
-            @include adaptiv-value('right', -40, -25, 1);
             transform: translateY(-50%);
+
+            width: 30px;
+            right: -40px;
         }
 	}
 
 	&--next {
 		&::after {
-			transform: translateX(-5%) rotate(-90deg);
+			transform: translateX(-14%) rotate(-180deg);
 		}
 	}
 }

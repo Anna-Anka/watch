@@ -16,5 +16,13 @@ export const checkoutCart = () => {
                 checkoutButton.setAttribute('aria-expanded', 'true');
             };
         });
+
+
+        if (window.innerWidth <= 991) {
+            checkoutButton.closest('.checkout-cart__content').classList.add('checkout-cart__content--collapsed');
+
+            checkoutButton.setAttribute('aria-label', 'Open list');
+            checkoutButton.setAttribute('aria-expanded', 'false');
+        }
     };
 }

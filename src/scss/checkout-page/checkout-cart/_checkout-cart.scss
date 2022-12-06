@@ -3,11 +3,10 @@
 	max-width: 366px;
 
 	@include mq(lg) {
-		margin-bottom: 100px;
+		padding-bottom: 32px;
 	}
 
 	&__content {
-		margin-bottom: 26px;
 		background-color: $white;
 		border-radius: 10px;
 		box-shadow: 0 4px 20px rgba(103, 106, 119, 0.1);
