@@ -5,6 +5,7 @@ export const checkoutForm = () => {
         checkoutTop.forEach((item) => {
             item.addEventListener('click', () => {
                 const list = item.closest('.checkout-form__list')
+                const content = list.querySelector('.checkout-form__content')
 
                 let button = null;
 
@@ -18,12 +19,15 @@ export const checkoutForm = () => {
                 list.classList.toggle('checkout-form__list--collapsed')
 
                 if (list.classList.contains('checkout-form__list--collapsed')) {
-                    console.log(true)
                     button.setAttribute('aria-label', 'Open block');
                     button.setAttribute('aria-expanded', 'false');
+                    content.style.maxHeight = '0'
+                    
                 } else {
                     button.setAttribute('aria-label', 'Close block');
                     button.setAttribute('aria-expanded', 'true');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    
                 };
             });
         });

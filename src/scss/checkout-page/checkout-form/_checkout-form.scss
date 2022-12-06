@@ -18,11 +18,10 @@
 
 		&--collapsed {
 			.checkout-form__content {
-		        height: 0;
+		        max-height: 0;
                 overflow: hidden;
                 opacity: 0;
-                transition: all 0.6s;
-                will-change: height;
+                will-change: max-height;
 			}
 		}
 	}
@@ -61,12 +60,11 @@
 
 	&__content {
         z-index: 5;
-        height: 100%;
         overflow: visible;
         background-color: $grey-100;
         opacity: 1;
         transition: all 0.6s ease-in-out;
-        will-change: height;
+        will-change: max-height;
 	}
 
 	&__box {
