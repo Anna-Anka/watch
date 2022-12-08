@@ -18,10 +18,10 @@
 
 		&--collapsed {
 			.checkout-form__content {
-		        max-height: 0;
-                overflow: hidden;
-                opacity: 0;
-                will-change: max-height;
+				padding: 0;
+				overflow: hidden;
+				opacity: 0;
+				will-change: min-height;
 			}
 		}
 	}
@@ -59,17 +59,21 @@
 	}
 
 	&__content {
-        z-index: 5;
-        overflow: visible;
-        background-color: $grey-100;
-        opacity: 1;
-        transition: all 0.6s ease-in-out;
-        will-change: max-height;
+		z-index: 5;
+		box-sizing: content-box;
+		padding: 20px 0;
+		overflow: visible;
+		opacity: 1;
+		transition: all 0.6s ease-in-out;
+		will-change: height;
+
+		* {
+			box-sizing: border-box;
+		}
 	}
 
 	&__box {
 		margin-bottom: 20px;
-        padding-top: 25px;
 	}
 
 	&__next {

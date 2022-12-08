@@ -21,11 +21,6 @@
 			margin-right: 0;
 			margin-bottom: 56px;
 		}
-
-		@include mq(sm) {
-			max-width: 90%;
-			margin: 0 auto 56px;
-		}
 	}
 
 	&__content {
@@ -72,11 +67,7 @@
 
 	&__item {
 		position: relative;
-		height: 367px;
-
-		@include mq(sm) {
-			height: 70vh;
-		}
+		height: 370px;
 	}
 
 	picture,
@@ -108,7 +99,7 @@
 		margin-bottom: 15px;
 		color: $black;
 		font-weight: $fw-500;
-		line-height: 0.4;
+		line-height: 0.8;
 	}
 
 	&__subtitle {
