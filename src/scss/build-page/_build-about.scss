@@ -65,11 +65,11 @@
 		}
 	}
 
-    &__nav {
-        @include mq(md) {
-            margin-bottom: 20px;
-        }
-    }
+	&__nav {
+		@include mq(md) {
+			margin-bottom: 20px;
+		}
+	}
 
 	&__buttons {
 		@include flex-all-center;
@@ -80,17 +80,38 @@
 	}
 
 	&__scroll {
-		@include bg-conatin;
 		display: none;
-        margin: 0 auto;
 		width: 40px;
 		height: 40px;
-		background-image: url('../img/icons/arrow-slider.svg');
-		background-size: 32px;
+		margin: 0 auto;
 		transform: rotate(-90deg);
+        position: relative;
+
+		&::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+			@include bg-conatin;
+			width: 100%;
+			height: 100%;
+			background-image: url('../img/icons/arrow-slider.svg');
+			background-size: 32px;
+			animation: arrow-scroll 1s linear infinite alternate;
+		}
 
 		@include mq(md) {
 			display: flex;
 		}
+	}
+}
+
+@keyframes arrow-scroll {
+	0% {
+		left: -10px;
+	}
+
+	100% {
+        left: 0;
 	}
 }

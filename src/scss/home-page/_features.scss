@@ -157,9 +157,9 @@
 		&--style {
 			.features__decor {
 				&::after {
-					top: 53px;
-					width: 173px;
-					height: 95px;
+					top: 46px;
+					width: 157px;
+					height: 80px;
 					background-image: url('../img/features/style.svg');
 				}
 			}
@@ -175,9 +175,9 @@
 				}
 
 				&::after {
-					top: -19px;
-					width: 104px;
-					height: 54px;
+					top: -30px;
+					width: 116px;
+					height: 79px;
 					background-image: url('../img/features/components.svg');
 				}
 			}
@@ -192,10 +192,10 @@
 				}
 
 				&::after {
-					top: 37px;
-					left: -113px;
-					width: 117px;
-					height: 64px;
+					top: 52px;
+					left: -143px;
+					width: 144px;
+					height: 92px;
 					background-image: url('../img/features/features.svg');
 				}
 			}
@@ -210,9 +210,9 @@
 		line-height: 0.9;
 	}
 
-    &__list {
-        line-height: 2.3;
-    }
+	&__list {
+		line-height: 2.3;
+	}
 
 	&__decor {
 		position: absolute;

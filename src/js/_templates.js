@@ -48,12 +48,16 @@ if (document.querySelector('.btn-thank')) {
         const modal = new GraphModal('modal').open('thank');
         btnThank.classList.add('btn-thank--active')
 
+        const modalCartContainer = document.querySelector('.graph-modal__container--cart')
         const modalBody = document.querySelector('.graph-modal')
         const modalContainerThank = document.querySelector('.graph-modal__container--thank')
+
+        modalCartContainer.classList.add('graph-modal__container--lock')
 
         modalBody.addEventListener('click', (e) => {
             if (e.target !== modalContainerThank && !modalContainerThank.contains(e.target)) {
                 btnThank.classList.remove('btn-thank--active')
+                modalCartContainer.classList.remove('graph-modal__container--lock')
             }
         });
     });

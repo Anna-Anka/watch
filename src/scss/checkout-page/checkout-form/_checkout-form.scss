@@ -21,7 +21,8 @@
 				padding: 0;
 				overflow: hidden;
 				opacity: 0;
-				will-change: min-height;
+				will-change: max-height;
+                box-sizing: content-box;
 			}
 		}
 	}
@@ -65,7 +66,7 @@
 		overflow: visible;
 		opacity: 1;
 		transition: all 0.6s ease-in-out;
-		will-change: height;
+		will-change: max-height;
 
 		* {
 			box-sizing: border-box;

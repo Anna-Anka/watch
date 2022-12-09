@@ -12,6 +12,10 @@
 
         &--only {
             text-align: center;
+
+            @include mq(lg) {
+                text-align: left;
+            }
         }
 	}
 
