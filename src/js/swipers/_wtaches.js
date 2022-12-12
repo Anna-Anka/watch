@@ -5,6 +5,8 @@ export const watchesSwiper = () => {
         allWatches.forEach(watches => {
             const swiperWatches = new Swiper(watches, {
 
+                loop: true,
+
                 navigation: {
                     nextEl: watches.querySelector('.swiper-button-next'),
                     prevEl: watches.querySelector('.swiper-button-prev'),
@@ -20,7 +22,6 @@ export const watchesSwiper = () => {
                         slidesPerView: 1,
                         slidesPerGroup: 1,
                         spaceBetween: 20,
-                        loop: true,
                     }
                 }
             });

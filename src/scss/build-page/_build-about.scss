@@ -80,24 +80,24 @@
 	}
 
 	&__scroll {
+		position: relative;
 		display: none;
 		width: 40px;
 		height: 40px;
 		margin: 0 auto;
 		transform: rotate(-90deg);
-        position: relative;
 
 		&::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-			@include bg-conatin;
+			position: absolute;
+			bottom: 0;
+			left: 0;
 			width: 100%;
 			height: 100%;
 			background-image: url('../img/icons/arrow-slider.svg');
 			background-size: 32px;
 			animation: arrow-scroll 1s linear infinite alternate;
+			content: '';
+			@include bg-conatin;
 		}
 
 		@include mq(md) {
@@ -112,6 +112,6 @@
 	}
 
 	100% {
-        left: 0;
+		left: 0;
 	}
 }
