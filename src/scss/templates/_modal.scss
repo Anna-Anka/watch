@@ -58,16 +58,17 @@
 			* {
 				visibility: visible;
 			}
-            
-            .graph-modal__box {
-                display: flex;
-                height: 100vh;
-                height: calc(var(--vh, 1vh));
-            }
 
-            .graph-modal__content {
-                width: 100%;
-            }
+			.graph-modal__box {
+				display: flex;
+				height: 100vh;
+				height: calc(var(--vh, 1vh));
+				background-color: $white;
+			}
+
+			.graph-modal__content {
+				width: 100%;
+			}
 		}
 
 		&--thank {
@@ -98,6 +99,8 @@
 			.graph-modal__content {
 				@include flex-center-sb-v;
 				@include adaptiv-value('padding-top', 94, 48, 1);
+				height: inherit;
+				background-color: $grey-100;
 			}
 
 			.graph-modal__inner {
@@ -154,7 +157,6 @@
 
 	&__box {
 		width: 100%;
-		// height: 100vh;
 		overflow-y: auto;
 	}
 
@@ -185,7 +187,6 @@
 		@include flex-v-sb;
 		background-color: $white;
 	}
-
 
 	&__inner {
 		padding: 20px 20px 15px;
