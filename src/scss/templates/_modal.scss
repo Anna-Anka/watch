@@ -62,6 +62,7 @@
             .graph-modal__box {
                 display: flex;
                 height: 100vh;
+                height: calc(var(--vh, 1vh));
             }
 
             .graph-modal__content {
@@ -182,7 +183,7 @@
 
 	&__content {
 		@include flex-v-sb;
-		background-color: lightgreen;
+		background-color: peru;
         
 	}
 
