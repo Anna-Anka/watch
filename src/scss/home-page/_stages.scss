@@ -83,7 +83,7 @@
 
 			@include mq(md) {
 				top: unset;
-				bottom: -58px;
+				bottom: -50px;
 				left: 50%;
 				width: 1px;
 				height: 100%;
@@ -106,7 +106,7 @@
 		padding: 5px;
 		font-size: 32px;
 		font-family: $space;
-		line-height: 1.2;
+		line-height: 1.35;
 		text-align: center;
 		vertical-align: middle;
 		background-color: $violet-400;

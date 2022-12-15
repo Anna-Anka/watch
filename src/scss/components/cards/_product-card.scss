@@ -45,10 +45,6 @@
 		&:last-child {
 			visibility: hidden;
 			opacity: 0;
-
-			@include mq(lg) {
-				display: none;
-			}
 		}
 	}
 

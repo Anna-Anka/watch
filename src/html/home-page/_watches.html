@@ -101,9 +101,12 @@
                     <button class="watches__button watches__button--next swiper-button-next" type="button">
                     </button>
                 </div>
-                <a class="watches__btn button" href="#">
-                    Design Your Watch
-                </a>
+                @if(context.button === 'true') {
+                    <a class="watches__btn button" href="#">
+                        Design Your Watch
+                    </a>
+                }
+            
             </div>
         </div>
     </div>

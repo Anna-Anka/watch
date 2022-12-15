@@ -40,9 +40,9 @@
 	&__container {
 		right: -100%;
 		width: 0;
+		width: 100%;
 		max-width: 370px;
 		min-height: 100%;
-		width: 100%;
 		min-height: 0;
 		overflow-y: auto;
 		text-align: left;
@@ -55,9 +55,9 @@
 			overflow-y: auto;
 			transition: right 0.7s;
 
-            * {
-                visibility: visible;
-            }
+			* {
+				visibility: visible;
+			}
 		}
 
 		&--thank {
@@ -179,10 +179,6 @@
 
 	&__inner {
 		padding: 20px 20px 30px;
-	}
-
-	&__products {
-		margin-bottom: 30px;
 	}
 
 	&__product {
