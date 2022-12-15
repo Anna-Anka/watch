@@ -58,6 +58,10 @@
 			* {
 				visibility: visible;
 			}
+
+            .graph-modal__content {
+                min-height: 100%;
+            }
 		}
 
 		&--thank {
@@ -81,7 +85,7 @@
 				border-radius: 25px;
 
 				@include mq(sm) {
-					min-height: 100vh;
+					height: 100vh;
 				}
 			}
 
@@ -144,7 +148,7 @@
 
 	&__box {
 		width: 100%;
-		min-height: 100vh;
+		height: 100vh;
 		overflow-y: auto;
 	}
 
