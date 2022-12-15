@@ -103,14 +103,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _templates_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./templates/burger */ "./src/js/templates/burger.js");
-/* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
-/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
-/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(choices_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _templates_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./templates/smooth-scroll */ "./src/js/templates/smooth-scroll.js");
+/* harmony import */ var _templates_fix_fullheight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./templates/fix-fullheight */ "./src/js/templates/fix-fullheight.js");
+/* harmony import */ var _templates_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./templates/burger */ "./src/js/templates/burger.js");
+/* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
+/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
+/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(choices_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _templates_smooth_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./templates/smooth-scroll */ "./src/js/templates/smooth-scroll.js");
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
-// * stepper
+ // * stepper
 //import { stepperFunction } from "./functions/stepper";
 //stepperFunction()
 // * accordion 
@@ -133,19 +134,20 @@ __webpack_require__.r(__webpack_exports__);
 // import './functions/fix-fullheight';
 // * Реализация бургер-меню
 
-(0,_templates_burger__WEBPACK_IMPORTED_MODULE_0__.burger)(); // * Реализация остановки скролла (не забудьте вызвать функцию)
+
+(0,_templates_burger__WEBPACK_IMPORTED_MODULE_1__.burger)(); // * Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './templates/disable-scroll';
 // * Реализация включения скролла (не забудьте вызвать функцию)
 // import { enableScroll } from './templates/enable-scroll';
 // * Реализация модального окна
 
 
-const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_1__["default"]('modal');
+const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_2__["default"]('modal');
 
 if (document.querySelector('.btn-thank')) {
   const btnThank = document.querySelector('.btn-thank');
   btnThank.addEventListener('click', () => {
-    const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_1__["default"]('modal').open('thank');
+    const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_2__["default"]('modal').open('thank');
     btnThank.classList.add('btn-thank--active');
     const modalCartContainer = document.querySelector('.graph-modal__container--cart');
     const modalBody = document.querySelector('.graph-modal');
@@ -216,7 +218,7 @@ if (document.querySelector('.btn-thank')) {
 if (document.querySelector('.products__sort')) {
   const defaultSelect = () => {
     const element = document.querySelector('.products__sort');
-    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_2___default())(element, {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_3___default())(element, {
       searchEnabled: false,
       sorter: () => {}
     });
@@ -228,7 +230,7 @@ if (document.querySelector('.products__sort')) {
 if (document.querySelector('.checkout-basic__select')) {
   const defaultSelect = () => {
     const element = document.querySelector('.checkout-basic__select');
-    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_2___default())(element, {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_3___default())(element, {
       searchEnabled: false,
       sorter: () => {}
     });
@@ -274,7 +276,7 @@ if (document.querySelector('.checkout-basic__select')) {
 
 
 
-(0,_templates_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__.smoothScroll)();
+(0,_templates_smooth_scroll__WEBPACK_IMPORTED_MODULE_4__.smoothScroll)();
 
 /***/ }),
 
@@ -757,6 +759,28 @@ const enableScroll = () => {
 
 /***/ }),
 
+/***/ "./src/js/templates/fix-fullheight.js":
+/*!********************************************!*\
+  !*** ./src/js/templates/fix-fullheight.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./throttle */ "./src/js/templates/throttle.js");
+
+
+const fixFullheight = () => {
+  let vh = window.innerHeight;
+  document.querySelector('.graph-modal__container--cart .graph-modal__box').style.setProperty('--vh', `${vh}px`);
+};
+
+let fixHeight = (0,_throttle__WEBPACK_IMPORTED_MODULE_0__.throttle)(fixFullheight);
+fixHeight();
+window.addEventListener('resize', fixHeight);
+
+/***/ }),
+
 /***/ "./src/js/templates/smooth-scroll.js":
 /*!*******************************************!*\
   !*** ./src/js/templates/smooth-scroll.js ***!
@@ -802,6 +826,48 @@ const smoothScroll = () => {
     // }
 
   }
+};
+
+/***/ }),
+
+/***/ "./src/js/templates/throttle.js":
+/*!**************************************!*\
+  !*** ./src/js/templates/throttle.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "throttle": () => (/* binding */ throttle)
+/* harmony export */ });
+const throttle = function (func) {
+  let delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
+  let isThrottled = false;
+  let savedArgs = null;
+  let savedThis = null;
+  return function wrap() {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    if (isThrottled) {
+      savedArgs = args, savedThis = this;
+      return;
+    }
+
+    func.apply(this, args);
+    isThrottled = true;
+    setTimeout(() => {
+      isThrottled = false;
+
+      if (savedThis) {
+        wrap.apply(savedThis, savedArgs);
+        savedThis = null;
+        savedArgs = null;
+      }
+    }, delay);
+  };
 };
 
 /***/ }),
