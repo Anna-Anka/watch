@@ -173,13 +173,13 @@
 
 	&__content {
 		@include flex-v-sb;
-		height: 100%;
+		height: inherit;
 		background-color: $white;
 	}
 
 	&__inner {
 		padding: 20px 20px 15px;
-        background-color: white;
+        background-color: rgb(190, 190, 249);
 	}
 
 	&__product {
