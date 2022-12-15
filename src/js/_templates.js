@@ -1,6 +1,8 @@
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
+import "./templates/fix-fullheight"
+
 // * stepper
 //import { stepperFunction } from "./functions/stepper";
 //stepperFunction()

@@ -1,7 +1,7 @@
 import { throttle } from './throttle';
 const fixFullheight = () => {
   let vh = window.innerHeight;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  document.querySelector('.graph-modal__container--cart .graph-modal__box').style.setProperty('--vh', `${vh}px`);
 };
 
 let fixHeight = throttle(fixFullheight);
