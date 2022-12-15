@@ -75,7 +75,7 @@
 
 			@include mq(sm) {
 				max-width: 100%;
-				min-height: 100vh;
+				height: 100vh;
 				margin: 0;
 			}
 
@@ -177,7 +177,7 @@
 
 	&__content {
 		@include flex-v-sb;
-		min-height: inherit;
+		height: 100%;
 		background-color: $white;
 	}
 
