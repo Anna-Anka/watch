@@ -8,7 +8,9 @@
 	}
 
 	&__list {
+		min-height: 0;
 		padding: 30px;
+		overflow: hidden;
 		border: 1px solid $grey-400;
 		border-radius: 20px;
 
@@ -18,11 +20,14 @@
 
 		&--collapsed {
 			.checkout-form__content {
-				padding: 0;
-				overflow: hidden;
-				opacity: 0;
-				will-change: max-height;
-                box-sizing: content-box;
+				grid-template-rows: 1fr;
+			}
+
+			.checkout-form__inner {
+				transform: translateY(0);
+				visibility: visible;
+				opacity: 1;
+				transition: transform 0.4s ease, visibility 0s linear, opacity 0.4s ease;
 			}
 		}
 	}
@@ -60,17 +65,23 @@
 	}
 
 	&__content {
-		z-index: 5;
-		box-sizing: content-box;
-		padding: 20px 0;
-		overflow: visible;
-		opacity: 1;
-		transition: all 0.6s ease-in-out;
-		will-change: max-height;
+		display: grid;
+		grid-template-rows: 0fr;
+		overflow: hidden;
+		transition: grid-template-rows 0.4s ease;
+	}
 
-		* {
-			box-sizing: border-box;
-		}
+	&__wrapper {
+		min-height: 0;
+	}
+
+	&__inner {
+		margin-bottom: 20px;
+		padding: 20px 0;
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity: 0;
+		transition: transform 0.4s ease, visibility 0.4s ease, opacity 0.4s ease;
 	}
 
 	&__box {

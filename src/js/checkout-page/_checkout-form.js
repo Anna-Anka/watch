@@ -7,10 +7,11 @@ export const checkoutForm = () => {
             const content = list.querySelector('.checkout-form__content')
 
             if (list.classList.contains('checkout-form__list--collapsed')) {
-                content.style.maxHeight = '0'
+                // content.style.maxHeight = '0'
 
             } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
+                // content.style.maxHeight = content.scrollHeight + 'px';
+                // content.style.maxHeight = '100%';
             };
 
             item.addEventListener('click', () => {
@@ -28,12 +29,13 @@ export const checkoutForm = () => {
                 if (list.classList.contains('checkout-form__list--collapsed')) {
                     button.setAttribute('aria-label', 'Open block');
                     button.setAttribute('aria-expanded', 'false');
-                    content.style.maxHeight = '0'
+                    //content.style.maxHeight = '0'
                     
                 } else {
                     button.setAttribute('aria-label', 'Close block');
                     button.setAttribute('aria-expanded', 'true'); 
-                    content.style.maxHeight = content.scrollHeight + 'px';
+                    // content.style.maxHeight = content.scrollHeight + 'px';
+                    // content.style.maxHeight = '100%';
                 };
             });
         });
@@ -47,7 +49,7 @@ export const checkoutForm = () => {
                 const block = document.getElementById(blockId).closest('.checkout-form__list');
                 block.classList.remove('checkout-form__list--collapsed');
                 const content = block.querySelector('.checkout-form__content')
-                content.style.maxHeight = content.scrollHeight + 'px';
+                //content.style.maxHeight = content.scrollHeight + 'px';
             });
         });
     };

@@ -7,61 +7,65 @@
                 <button class="checkout-form__collapse" type="button" aria-label="Close block" aria-expanded="true"></button>
             </div>
             <div class="checkout-form__content">
-                <div class="checkout-form__box">
-                    <div class="checkout-basic__item">
-                        <label class="sr-only" for="email">Enter your Email</label>
-                        <input class="form__field" name="email" type="email" placeholder="Email" id="email" required>
-                    </div>
-                    <div class="checkout-basic__item">
-                        <label class="sr-only" for="first-name">Enter your First Name</label>
-                        <input class="form__field" name="first-name" type="text" placeholder="First Name" id="first-name" required>
-                    </div>
-                    <div class="checkout-basic__item">
-                        <label class="sr-only" for="last-name">Enter your Last Name</label>
-                        <input class="form__field" name="last-name" type="text" placeholder="Last Name" id="last-name" required>
-                    </div>
-                    <div class="checkout-basic__item">
-                        <label class="sr-only" for="tel">Enter your Phone Number</label>
-                        <input class="form__field" name="tel" type="tel" placeholder="Phone Number" id="tel" required>
-                    </div>
-                    <div class="checkout-basic__item">
-                        <label class="sr-only" for="address-1">Enter your Address 1</label>
-                        <input class="form__field" name="address-1" type="text" placeholder="Address 1" id="address-1" required>
-                    </div>
-                    <div class="checkout-basic__item">
-                        <label class="sr-only" for="address-2">Enter your Address 2</label>
-                        <input class="form__field" name="address-2" type="text" placeholder="Address 2" id="address-2">
-                    </div>
-                    <div class="checkout-basic__items">
-                        <div class="checkout-basic__item">
-                            <label class="sr-only" for="city">Enter your City</label>
-                            <input class="form__field" name="city" type="text" placeholder="City" id="city" required>
+                <div class="checkout-form__wrapper">
+                    <div class="checkout-form__inner">
+                        <div class="checkout-form__box">
+                                <div class="checkout-basic__item">
+                                    <label class="sr-only" for="email">Enter your Email</label>
+                                    <input class="form__field" name="email" type="email" placeholder="Email" id="email" required>
+                                </div>
+                                <div class="checkout-basic__item">
+                                    <label class="sr-only" for="first-name">Enter your First Name</label>
+                                    <input class="form__field" name="first-name" type="text" placeholder="First Name" id="first-name" required>
+                                </div>
+                                <div class="checkout-basic__item">
+                                    <label class="sr-only" for="last-name">Enter your Last Name</label>
+                                    <input class="form__field" name="last-name" type="text" placeholder="Last Name" id="last-name" required>
+                                </div>
+                                <div class="checkout-basic__item">
+                                    <label class="sr-only" for="tel">Enter your Phone Number</label>
+                                    <input class="form__field" name="tel" type="tel" placeholder="Phone Number" id="tel" required>
+                                </div>
+                                <div class="checkout-basic__item">
+                                    <label class="sr-only" for="address-1">Enter your Address 1</label>
+                                    <input class="form__field" name="address-1" type="text" placeholder="Address 1" id="address-1" required>
+                                </div>
+                                <div class="checkout-basic__item">
+                                    <label class="sr-only" for="address-2">Enter your Address 2</label>
+                                    <input class="form__field" name="address-2" type="text" placeholder="Address 2" id="address-2">
+                                </div>
+                                <div class="checkout-basic__items">
+                                    <div class="checkout-basic__item">
+                                        <label class="sr-only" for="city">Enter your City</label>
+                                        <input class="form__field" name="city" type="text" placeholder="City" id="city" required>
+                                    </div>
+                                    <div class="checkout-basic__item">
+                                        <label class="sr-only" for="zip-code">Enter your Zip Code</label>
+                                        <input class="form__field" name="zip-code" type="text" placeholder="Zip Code" id="zip-code" required>
+                                    </div>
+                                </div>
+                                <div class="checkout-basic__item">
+                                    <label class="sr-only" for="country">Choose country</label>
+                                    <select class="checkout-basic__select" name="country" id="country">
+                                        <option value="country">Country</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Belize">Belize</option>
+                                        <option value="Benin">Benin</option>
+                                        <option value="Bhutan">Bhutan</option>
+                                        <option value="Bolivia">Bolivia</option>
+                                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Belize">Belize</option>
+                                        <option value="Benin">Benin</option>
+                                        <option value="Bhutan">Bhutan</option>
+                                        <option value="Bolivia">Bolivia</option>
+                                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                    </select>
+                                </div>
                         </div>
-                        <div class="checkout-basic__item">
-                            <label class="sr-only" for="zip-code">Enter your Zip Code</label>
-                            <input class="form__field" name="zip-code" type="text" placeholder="Zip Code" id="zip-code" required>
-                        </div>
-                    </div>
-                    <div class="checkout-basic__item">
-                        <label class="sr-only" for="country">Choose country</label>
-                        <select class="checkout-basic__select" name="country" id="country">
-                            <option value="country">Country</option>
-                            <option value="Belgium">Belgium</option>
-                            <option value="Belize">Belize</option>
-                            <option value="Benin">Benin</option>
-                            <option value="Bhutan">Bhutan</option>
-                            <option value="Bolivia">Bolivia</option>
-                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                            <option value="Belgium">Belgium</option>
-                            <option value="Belize">Belize</option>
-                            <option value="Benin">Benin</option>
-                            <option value="Bhutan">Bhutan</option>
-                            <option value="Bolivia">Bolivia</option>
-                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                        </select>
+                        <a class="checkout-form__next button" href="#" data-goto="#shipping">Countiniue</a>
                     </div>
                 </div>
-                <a class="checkout-form__next button" href="#" data-goto="#shipping">Countiniue</a>
             </div>
         </fieldset>
         <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-shipping">
@@ -70,42 +74,46 @@
                 <button class="checkout-form__collapse" type="button" aria-label="Open block" aria-expanded="false"></button>
             </div>
             <div class="checkout-form__content">
-                <div class="checkout-form__box">
-                    <label class="checkout-shipping__item">
-                        <div class="checkout-shipping__content">
-                            <div class="checkout-shipping__control">
-                                <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express" checked required>
-                                <span class="checkout-shipping__visible"></span>
-                            </div>
-                            <div class="checkout-shipping__about">
-                                <span class="checkout-shipping__title">UPS Express</span>
-                                <p class="checkout-shipping__text">
-                                    UPS Express 2-3 working days
-                                </p>
-                            </div>
+                <div class="checkout-form__wrapper">
+                    <div class="checkout-form__inner">
+                        <div class="checkout-form__box">
+                            <label class="checkout-shipping__item">
+                                <div class="checkout-shipping__content">
+                                    <div class="checkout-shipping__control">
+                                        <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express" checked required>
+                                        <span class="checkout-shipping__visible"></span>
+                                    </div>
+                                    <div class="checkout-shipping__about">
+                                        <span class="checkout-shipping__title">UPS Express</span>
+                                        <p class="checkout-shipping__text">
+                                            UPS Express 2-3 working days
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="checkout-shipping__price">$49.99</span>
+                            </label>
+                            <label class="checkout-shipping__item">
+                                <div class="checkout-shipping__content">
+                                    <div class="checkout-shipping__control">
+                                        <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express">
+                                        <span class="checkout-shipping__visible"></span>
+                                    </div>
+                                    <div class="checkout-shipping__about">
+                                        <span class="checkout-shipping__title">UPS Standard</span>
+                                        <p class="checkout-shipping__text">
+                                            UPS Express 2-3 working days
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="checkout-shipping__price">Free</span>
+                            </label>
                         </div>
-                        <span class="checkout-shipping__price">$49.99</span>
-                    </label>
-                    <label class="checkout-shipping__item">
-                        <div class="checkout-shipping__content">
-                            <div class="checkout-shipping__control">
-                                <input class="checkout-shipping__hidden" type="radio" name="shipping" value="UPS Express">
-                                <span class="checkout-shipping__visible"></span>
-                            </div>
-                            <div class="checkout-shipping__about">
-                                <span class="checkout-shipping__title">UPS Standard</span>
-                                <p class="checkout-shipping__text">
-                                    UPS Express 2-3 working days
-                                </p>
-                            </div>
-                        </div>
-                        <span class="checkout-shipping__price">Free</span>
-                    </label>
+                        <a class="checkout-form__next button" href="#" id="shipping" data-goto="#payment">Countiniue</a>
+                    </div>
                 </div>
-                <a class="checkout-form__next button" href="#" id="shipping" data-goto="#payment">Countiniue</a>
             </div>
         </fieldset>
-        <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-payment">
+        <!-- <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-payment">
             <div class="checkout-form__top">
                 <legend class="checkout-form__title">Payment</legend>
                 <button class="checkout-form__collapse" type="button" aria-label="Open block" aria-expanded="false"></button>
@@ -194,6 +202,6 @@
                     </p>
                 </div>
             </div>
-        </fieldset>
+        </fieldset> -->
     </form>
 </section>
