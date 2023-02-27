@@ -109,37 +109,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
 /* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(choices_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _templates_smooth_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./templates/smooth-scroll */ "./src/js/templates/smooth-scroll.js");
-// Данный файл - лишь собрание подключений готовых компонентов.
-// Рекомендуется создавать отдельный файл в папке components и подключать все там
- // * stepper
-//import { stepperFunction } from "./functions/stepper";
-//stepperFunction()
-// * accordion 
-//import { accordionFunction } from "./templates/accordion";
-//accordionFunction();
-// * Определение операционной системы на мобильных
-// import { mobileCheck } from "./functions/mobile-check";
-// console.log(mobileCheck())
-// * Определение ширины экрана
-// import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
-// if (isDesktop()) {
-//   console.log('...')
-// }
-// * Троттлинг функции (для ресайза, ввода в инпут, скролла и т.д.)
-// import { throttle } from './functions/throttle';
-// let yourFunc = () => { console.log('throttle') };
-// let func = throttle(yourFunc);
-// window.addEventListener('resize', func);
-// * Фикс фулскрин-блоков
-// import './functions/fix-fullheight';
-// * Реализация бургер-меню
+ // * Реализация бургер-меню
 
 
-(0,_templates_burger__WEBPACK_IMPORTED_MODULE_1__.burger)(); // * Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './templates/disable-scroll';
-// * Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './templates/enable-scroll';
-// * Реализация модального окна
+(0,_templates_burger__WEBPACK_IMPORTED_MODULE_1__.burger)(); // * Реализация модального окна
 
 
 const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_2__["default"]('modal');
@@ -159,58 +132,8 @@ if (document.querySelector('.btn-thank')) {
         modalCartContainer.classList.remove('graph-modal__container--lock');
       }
     });
-  });
-  const url = window.location.href;
-
-  if (url.indexOf('thank.html') != -1) {
-    btnThank.click();
-  } //btnThank.click();
-
-} // * Реализация табов
-//import GraphTabs from 'graph-tabs';
-//const tabs = new GraphTabs('tab');
-// * Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
-// * Подключение плагина кастом-скролла
-//import 'simplebar';
-// * Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
-// createPopper(el, tooltip, {
-//   placement: 'right'
-// });
-// * Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
-// * Подключение анимаций по скроллу
-// import AOS from 'aos';
-// AOS.init();
-// * Подключение параллакса блоков при скролле
-// import Rellax from 'rellax';
-// const rellax = new Rellax('.rellax');
-// * Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
-// * Подключение галереи (Fullscreen Lightbox)
-//import 'fslightbox'
-// * Подключение mixit up
-//import mixitup from 'mixitup';
-//let mixer = mixitup('.sort-content');
-// * Подключение Isotope
-// import Isotope from "isotope-layout";
-// const elem = document.querySelector('.');
-// const iso = new Isotope(elem, {
-//     itemSelector: '.',
-//     layoutMode: 'masonry'
-// });
-// * Подключение inputmask
-// import Inputmask from "inputmask";
-// let inputs = document.querySelectorAll('input[type="tel"]')
-// let im = new Inputmask('+7 (999) 999-99-99')
-// im.mask(inputs)
-// * Подключение choices.js
+  }); // btnThank.click();
+} // * Подключение choices.js
 
 
 
@@ -237,42 +160,7 @@ if (document.querySelector('.checkout-basic__select')) {
   };
 
   defaultSelect();
-} // * Подключение just-validate
-//import JustValidate from "just-validate";
-//Если несколько форм
-// const forms = document.querySelectorAll('.form')
-// forms.forEach((form) => {
-//     const formValidation = new JustValidate(form)
-//     formValidation.addField('input[type="email"]', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Поле должно быть заполнено',
-//         },
-//         {
-//             rule: 'email',
-//             errorMessage: 'Введите корректный email',
-//         },
-//     ]);
-// })
-//Если одна форма
-// const validation = new JustValidate('.test');
-// validation.addField('input[type="email"]', [
-//     {
-//         rule: 'required',
-//         errorMessage: 'Поле должно быть заполнено',
-//     },
-//     {
-//         rule: 'email',
-//         errorMessage: 'Введите корректный email',
-//     },
-// ]);
-// * Подключение marquee
-//import { handleMarquee } from "./templates/marquee";
-//handleMarquee();
-// * Подключение липкой шапки
-// import { headerSticky } from "./templates/header-sticky";
-// headerSticky()
-// * Подключение плавного скролла
+} // * Подключение плавного скролла
 
 
 
@@ -403,10 +291,9 @@ const checkoutForm = () => {
       const list = item.closest('.checkout-form__list');
       const content = list.querySelector('.checkout-form__content');
 
-      if (list.classList.contains('checkout-form__list--collapsed')) {
-        content.style.maxHeight = '0';
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
+      if (list.classList.contains('checkout-form__list--collapsed')) {// content.style.maxHeight = '0'
+      } else {// content.style.maxHeight = content.scrollHeight + 'px';
+        // content.style.maxHeight = '100%';
       }
 
       ;
@@ -424,12 +311,11 @@ const checkoutForm = () => {
 
         if (list.classList.contains('checkout-form__list--collapsed')) {
           button.setAttribute('aria-label', 'Open block');
-          button.setAttribute('aria-expanded', 'false');
-          content.style.maxHeight = '0';
+          button.setAttribute('aria-expanded', 'false'); //content.style.maxHeight = '0'
         } else {
           button.setAttribute('aria-label', 'Close block');
-          button.setAttribute('aria-expanded', 'true');
-          content.style.maxHeight = content.scrollHeight + 'px';
+          button.setAttribute('aria-expanded', 'true'); // content.style.maxHeight = content.scrollHeight + 'px';
+          // content.style.maxHeight = '100%';
         }
 
         ;
@@ -446,8 +332,7 @@ const checkoutForm = () => {
         const blockId = el.getAttribute('data-goto').substr(1);
         const block = document.getElementById(blockId).closest('.checkout-form__list');
         block.classList.remove('checkout-form__list--collapsed');
-        const content = block.querySelector('.checkout-form__content');
-        content.style.maxHeight = content.scrollHeight + 'px';
+        const content = block.querySelector('.checkout-form__content'); //content.style.maxHeight = content.scrollHeight + 'px';
       });
     });
   }
