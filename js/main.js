@@ -289,14 +289,6 @@ const checkoutForm = () => {
     const checkoutTop = document.querySelectorAll('.checkout-form__top');
     checkoutTop.forEach(item => {
       const list = item.closest('.checkout-form__list');
-      const content = list.querySelector('.checkout-form__content');
-
-      if (list.classList.contains('checkout-form__list--collapsed')) {// content.style.maxHeight = '0'
-      } else {// content.style.maxHeight = content.scrollHeight + 'px';
-        // content.style.maxHeight = '100%';
-      }
-
-      ;
       item.addEventListener('click', () => {
         let button = null;
 
@@ -311,11 +303,10 @@ const checkoutForm = () => {
 
         if (list.classList.contains('checkout-form__list--collapsed')) {
           button.setAttribute('aria-label', 'Open block');
-          button.setAttribute('aria-expanded', 'false'); //content.style.maxHeight = '0'
+          button.setAttribute('aria-expanded', 'false');
         } else {
           button.setAttribute('aria-label', 'Close block');
-          button.setAttribute('aria-expanded', 'true'); // content.style.maxHeight = content.scrollHeight + 'px';
-          // content.style.maxHeight = '100%';
+          button.setAttribute('aria-expanded', 'true');
         }
 
         ;
@@ -331,8 +322,8 @@ const checkoutForm = () => {
       el.addEventListener('click', function (e) {
         const blockId = el.getAttribute('data-goto').substr(1);
         const block = document.getElementById(blockId).closest('.checkout-form__list');
-        block.classList.remove('checkout-form__list--collapsed');
-        const content = block.querySelector('.checkout-form__content'); //content.style.maxHeight = content.scrollHeight + 'px';
+        block.classList.add('checkout-form__list--collapsed');
+        console.log(block);
       });
     });
   }
@@ -697,19 +688,7 @@ const smoothScroll = () => {
         });
         e.preventDefault();
       }
-    } // function onMenuLinkClick(e) {
-    //     const menuLink = e.target
-    //     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-    //         const gotoBlock = document.querySelector(menuLink.dataset.goto)
-    //         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header__bottom').offsetHeight
-    //         window.scrollTo({
-    //             top: gotoBlockValue,
-    //             behavior: "smooth"
-    //         })
-    //         e.preventDefault()
-    //     }
-    // }
-
+    }
   }
 };
 
