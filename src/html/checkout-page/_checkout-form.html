@@ -1,7 +1,7 @@
 <section class="checkout-form">
     <h2 class="sr-only">Form</h2>
     <form class="form" action="#">
-        <fieldset class="checkout-form__list checkout-basic">
+        <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-basic">
             <div class="checkout-form__top">
                 <legend class="checkout-form__title">Basic Info</legend>
                 <button class="checkout-form__collapse" type="button" aria-label="Close block" aria-expanded="true"></button>
@@ -68,7 +68,7 @@
                 </div>
             </div>
         </fieldset>
-        <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-shipping">
+        <fieldset class="checkout-form__list checkout-shipping" id="shipping">
             <div class="checkout-form__top">
                 <legend class="checkout-form__title">Shipping</legend>
                 <button class="checkout-form__collapse" type="button" aria-label="Open block" aria-expanded="false"></button>
@@ -108,100 +108,104 @@
                                 <span class="checkout-shipping__price">Free</span>
                             </label>
                         </div>
-                        <a class="checkout-form__next button" href="#" id="shipping" data-goto="#payment">Countiniue</a>
+                        <a class="checkout-form__next button" href="#" data-goto="#payment">Countiniue</a>
                     </div>
                 </div>
             </div>
         </fieldset>
-        <!-- <fieldset class="checkout-form__list checkout-form__list--collapsed checkout-payment">
+        <fieldset class="checkout-form__list checkout-payment" id="payment">
             <div class="checkout-form__top">
                 <legend class="checkout-form__title">Payment</legend>
                 <button class="checkout-form__collapse" type="button" aria-label="Open block" aria-expanded="false"></button>
             </div>
             <div class="checkout-form__content">
-                <div class="checkout-form__box">
-                    <div class="checkout-payment__top">
-                        <label class="checkout-card">
-                            <div class="checkout-card__radio">
-                                <input class="checkout-card__hidden" type="radio" name="card" value="Credit Card" checked required>
-                                <span class="checkout-card__visible"></span>
+                <div class="checkout-form__wrapper">
+                    <div class="checkout-form__inner">
+                        <div class="checkout-form__box">
+                            <div class="checkout-payment__top">
+                                <label class="checkout-card">
+                                    <div class="checkout-card__radio">
+                                        <input class="checkout-card__hidden" type="radio" name="card" value="Credit Card" checked required>
+                                        <span class="checkout-card__visible"></span>
+                                    </div>
+                                    <div class="checkout-card__content">
+                                        <span class="checkout-card__subtitle">Credit Card</span>
+                                        <ul class="checkout-card__items">
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/visa.svg');">
+                                                <span class="sr-only">visa</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/mastercard.svg');">
+                                                <span class="sr-only">mastercard</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/maestro.svg');">
+                                                <span class="sr-only">maestro</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/american-express.svg');">
+                                                <span class="sr-only">american express</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/discover.svg');">
+                                                <span class="sr-only">discover</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/diners-club.svg');">
+                                                <span class="sr-only">diners club</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/jcb.svg');">
+                                                <span class="sr-only">jcb</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/troy.svg');">
+                                                <span class="sr-only">troy</span>
+                                            </li>
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/ob.svg');">
+                                                <span class="sr-only">ob</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                                <label class="checkout-card">
+                                    <div class="checkout-card__radio">
+                                        <input class="checkout-card__hidden" type="radio" name="card" value="PayPal" required>
+                                        <span class="checkout-card__visible"></span>
+                                    </div>
+                                    <div class="checkout-card__content">
+                                        <span class="checkout-card__subtitle">PayPal</span>
+                                        <ul class="checkout-card__items">
+                                            <li class="checkout-card__item" style="background-image: url('img/cards/paypal.svg');">
+                                                <span class="sr-only">PayPal</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
                             </div>
-                            <div class="checkout-card__content">
-                                <span class="checkout-card__subtitle">Credit Card</span>
-                                <ul class="checkout-card__items">
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/visa.svg');">
-                                        <span class="sr-only">visa</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/mastercard.svg');">
-                                        <span class="sr-only">mastercard</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/maestro.svg');">
-                                        <span class="sr-only">maestro</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/american-express.svg');">
-                                        <span class="sr-only">american express</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/discover.svg');">
-                                        <span class="sr-only">discover</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/diners-club.svg');">
-                                        <span class="sr-only">diners club</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/jcb.svg');">
-                                        <span class="sr-only">jcb</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/troy.svg');">
-                                        <span class="sr-only">troy</span>
-                                    </li>
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/ob.svg');">
-                                        <span class="sr-only">ob</span>
-                                    </li>
-                                </ul>
+                            <div class="checkout-payment__content">
+                                <div class="checkout-payment__item">
+                                    <label class="sr-only" for="card">Enter your Card Number</label>
+                                    <input class="form__field form__field--number" name="card" type="number" placeholder="Card Number" id="card" required>
+                                </div>
+                                <div class="checkout-payment__items">
+                                    <div class="checkout-payment__item">
+                                        <label class="sr-only" for="date">Enter your Expiry Date</label>
+                                        <input class="form__field form__field--number" name="date" type="number" placeholder="Expiry Date" id="date" required>
+                                    </div>
+                                    <div class="checkout-payment__item">
+                                        <label class="sr-only" for="cvc">Enter your CVC / CVV</label>
+                                        <input class="form__field form__field--number" name="cvc" type="number" placeholder="CVC / CVV" id="cvc" required>
+                                    </div>
+                                </div>
                             </div>
-                        </label>
-                        <label class="checkout-card">
-                            <div class="checkout-card__radio">
-                                <input class="checkout-card__hidden" type="radio" name="card" value="PayPal" required>
-                                <span class="checkout-card__visible"></span>
-                            </div>
-                            <div class="checkout-card__content">
-                                <span class="checkout-card__subtitle">PayPal</span>
-                                <ul class="checkout-card__items">
-                                    <li class="checkout-card__item" style="background-image: url('img/cards/paypal.svg');">
-                                        <span class="sr-only">PayPal</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="checkout-payment__content">
-                        <div class="checkout-payment__item">
-                            <label class="sr-only" for="card">Enter your Card Number</label>
-                            <input class="form__field form__field--number" name="card" type="number" placeholder="Card Number" id="card" required>
+                            <p class="checkout-payment__text">
+                                Non-EU countries are subject to certain VAT and customs duties.
+                            </p>
+                            <button class="checkout-payment__button button" type="submit">
+                                Complete Payment
+                            </button>
+                            <p class="checkout-payment__subtext">
+                                By placing your order you agree to our <a class="checkout-payment__link" href="#">Terms & Conditions</a> and you understand that we will
+                                process your personal data on the basis of our <a class="checkout-payment__link" href="#">Privacy Policy</a>.
+                            </p>
                         </div>
-                        <div class="checkout-payment__items">
-                            <div class="checkout-payment__item">
-                                <label class="sr-only" for="date">Enter your Expiry Date</label>
-                                <input class="form__field form__field--number" name="date" type="number" placeholder="Expiry Date" id="date" required>
-                            </div>
-                            <div class="checkout-payment__item">
-                                <label class="sr-only" for="cvc">Enter your CVC / CVV</label>
-                                <input class="form__field form__field--number" name="cvc" type="number" placeholder="CVC / CVV" id="cvc" required>
-                            </div>
-                        </div>
                     </div>
-                    <p class="checkout-payment__text">
-                        Non-EU countries are subject to certain VAT and customs duties.
-                    </p>
-                    <button class="checkout-payment__button button" type="submit" id="payment">
-                        Complete Payment
-                    </button>
-                    <p class="checkout-payment__subtext">
-                        By placing your order you agree to our <a class="checkout-payment__link" href="#">Terms & Conditions</a> and you understand that we will
-                        process your personal data on the basis of our <a class="checkout-payment__link" href="#">Privacy Policy</a>.
-                    </p>
                 </div>
             </div>
-        </fieldset> -->
+        </fieldset>
     </form>
 </section>
