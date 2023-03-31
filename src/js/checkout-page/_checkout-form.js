@@ -36,7 +36,6 @@ export const checkoutForm = () => {
                 const blockId = el.getAttribute('data-goto').substr(1);
                 const block = document.getElementById(blockId).closest('.checkout-form__list');
                 block.classList.add('checkout-form__list--collapsed');
-                console.log(block)
             });
         });
     };
