@@ -69,6 +69,10 @@
 			.graph-modal__content {
 				width: 100%;
 			}
+
+            .graph-modal__inner {
+                background-color: $white;
+            }
 		}
 
 		&--thank {
@@ -167,7 +171,8 @@
 	}
 
 	&__title {
-		color: $black;
+		// color: $black;
+        color: red;
 		font-size: 20px;
 		font-family: $space;
 		line-height: 1.2;
