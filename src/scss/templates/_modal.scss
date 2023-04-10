@@ -47,7 +47,6 @@
 		overflow-y: auto;
 		text-align: left;
 		cursor: default;
-        background-color: $white;
 
 		&--cart {
 			position: fixed;
@@ -71,7 +70,14 @@
 				width: 100%;
 			}
 
-            .graph-modal__inner {
+			.graph-modal__inner {
+				height: 100%;
+				background-color: $white;
+			}
+
+            .graph-modal__products,
+            .graph-modal__product,
+            .product-card {
                 background-color: $white;
             }
 		}
@@ -172,8 +178,7 @@
 	}
 
 	&__title {
-		// color: $black;
-        color: blue;
+		color: $black;
 		font-size: 20px;
 		font-family: $space;
 		line-height: 1.2;
@@ -255,7 +260,7 @@
 	}
 
 	&__bottom {
-		// margin-top: auto;
+		margin-top: auto;
 		padding: 24px 20px;
 		background-color: $grey-100;
 	}
